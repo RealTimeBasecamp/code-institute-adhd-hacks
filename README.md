@@ -27,7 +27,8 @@ People with ADHD or people who know someone with ADHD can use this website to ma
 **All icons are embedded from:** https://fontawesome.com/
 
 ## Wireframes:
-Wireframes were build using [Balsamiq](https://balsamiq.com/).
+All wireframes were build using [Balsamiq](https://balsamiq.com/).
+![Website wireframes](/assets/images/wireframes.png "Website wireframe diagram")
 
 ## User stories (Linear):
 - ???
