@@ -31,6 +31,7 @@ People with ADHD or people who know someone with ADHD can use this website to ma
 Wireframes were build using Balsamiq.
 
 ## User stories (Linear):
+- ???
 
 ## Validation:
 
@@ -38,7 +39,6 @@ Wireframes were build using Balsamiq.
 - [ ]  HTML
 - [ ]  CSS
 - [ ]  Jigsaw
-- [ ]  Git commits
 - [ ]  Site deployed on Github pages with no errors
 
 ### Use of AI:
@@ -58,8 +58,10 @@ How AI contributed to performance and UX improvements. Minimal documentation of 
 - ???
 - ???
 
-How AI influenced workflow, focusing on efficiency and outcomes without in-depth prompt documentation:
-- ???
+### How AI influenced workflow, focusing on efficiency and outcomes without in-depth prompt documentation:
+I used Github desktop copilot to automatically generate cleaner and more concise comit messages.
+![Github desktop copilot comit message screenshot explaining ai use](/assets/images/github-desktop-copilot.png "Github desktop copilot comit message screenshot explaining ai use")
+
 - ???
 - ???
 
