@@ -31,10 +31,9 @@ All wireframes were build using [Balsamiq](https://balsamiq.com/).
 ![Website wireframes](/assets/images/wireframes.png "Website wireframe diagram")
 
 ## User stories (Linear):
-- ???
+I did not choose to create user stories as this project was only 3 days long. Instead I created detailed wireframes that explained the user flow and journey.
 
 ## Validation:
-
 - [ ]  WCAG
 - [ ]  HTML
 - [ ]  CSS
@@ -42,7 +41,6 @@ All wireframes were build using [Balsamiq](https://balsamiq.com/).
 - [ ]  Site deployed on Github pages with no errors
 
 ### Use of AI:
-
 Key decisions where AI was used to generate code, focusing on the outcomes rather than detailed prompts or manual interventions:
 - ???
 - ???
@@ -64,4 +62,3 @@ I used Github desktop copilot to automatically generate cleaner and more concise
 
 - ???
 - ???
-
