@@ -3,7 +3,6 @@
 ### Deployed website:
 https://realtimebasecamp.github.io/code-institute-adhd-hacks/
 
-
 ### Application purpose:
 A simple educational website designed to help people with ADHD. This is not a real website, it is developed to test my skills as part of the Code Institute full stack boot camp first assessment.
 
@@ -19,16 +18,16 @@ People with ADHD or people who know someone with ADHD can use this website to ma
 
 ### Features:
 
-- Feature 1 (User benefits list)
-- Feature 2 (User benefits list)
-- External code sources:
-    - Bootstrap library
-    - Forms-submit toggle
-    - https://getbootstrap.com/docs/5.1/forms/checks-radios/
+- Feature 1 (Users can learn more about the different types of ADHD)
+- Feature 2 (Users can access ADHD resources )
+
+### External code sources:
+**Custom CSS from:** Bootstrap library 5.3.8
+
+**All icons are embedded from:** https://fontawesome.com/
 
 ## Wireframes:
-
-Wireframes were build using Balsamiq.
+Wireframes were build using [Balsamiq](https://balsamiq.com/).
 
 ## User stories (Linear):
 - ???
