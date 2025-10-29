@@ -77,6 +77,7 @@
         </p>
       </div>
     </section>
+
     <!-- Accordion section -->
     <section>
       <div class="container my-4">
@@ -533,129 +534,74 @@
       </div>
     </section>
 
-    <section>
-      <div class="container my-4 text-center">
-        <h2>ADHD Videos</h2>
-        <p class="mb-4">Watch helpful videos about ADHD management</p>
-        <div class="row justify-content-center">
-          <div class="col-12 col-sm-10 col-md-6 col-lg-4">
-            <div
-              id="shortsCarousel"
-              class="carousel slide"
-              data-bs-ride="carousel"
-              data-bs-interval="5000"
+    <!-- ADHD Videos Carousel Section -->
+    <section class="container py-5">
+      <div class="row mb-2">
+        <div class="col-12">
+          <div class="text-center">
+            <h2 class="fw-bold">ADHD Videos</h2>
+            <p class="fw-bold">Watch helpful videos about ADHD management</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Active Video Carousel with Greyed Background -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-6">
+          <div class="position-relative overflow-hidden mx-auto">
+            <!-- Previous Button -->
+            <button
+              class="position-absolute btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
+              style="
+                width: 2.5rem;
+                height: 2.5rem;
+                z-index: 1000;
+                background-color: rgba(0, 0, 0, 0.7);
+                border: none;
+                left: 0.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+              "
+              onclick="changeVideo(-1)"
+              aria-label="Previous video"
             >
-              <div
-                class="carousel-inner"
-                style="background-color: #000; border-radius: 8px"
-              >
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                  <div
-                    style="
-                      position: relative;
-                      width: 100%;
-                      padding-bottom: 177.78%;
-                      overflow: hidden;
-                    "
-                  >
-                    <iframe
-                      style="
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                      "
-                      src="https://www.youtube.com/embed/hpfMO7Bp5zA"
-                      title="ADHD Video 1"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </div>
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+                style="width: 1.25rem; height: 1.25rem"
+              ></span>
+            </button>
 
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                  <div
-                    style="
-                      position: relative;
-                      width: 100%;
-                      padding-bottom: 177.78%;
-                      overflow: hidden;
-                    "
-                  >
-                    <iframe
-                      style="
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                      "
-                      src="https://www.youtube.com/embed/S9kAohMS1Cs"
-                      title="ADHD Video 2"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </div>
+            <!-- Next Button -->
+            <button
+              class="position-absolute btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
+              style="
+                width: 2.5rem;
+                height: 2.5rem;
+                z-index: 1000;
+                background-color: rgba(0, 0, 0, 0.7);
+                border: none;
+                right: 0.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+              "
+              onclick="changeVideo(1)"
+              aria-label="Next video"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+                style="width: 1.25rem; height: 1.25rem"
+              ></span>
+            </button>
 
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                  <div
-                    style="
-                      position: relative;
-                      width: 100%;
-                      padding-bottom: 177.78%;
-                      overflow: hidden;
-                    "
-                  >
-                    <iframe
-                      style="
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                      "
-                      src="https://www.youtube.com/embed/5tPjjjgPF_4"
-                      title="ADHD Video 3"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Controls -->
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#shortsCarousel"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#shortsCarousel"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+            <!-- Video Container -->
+            <div
+              class="position-relative mx-auto"
+              style="width: 100%; max-width: 18.75rem"
+              id="video-carousel-container"
+            >
+              <!-- Videos will be generated automatically by carousel.js -->
             </div>
           </div>
         </div>
@@ -686,6 +632,9 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Video Carousel Script -->
+    <script src="assets/js/carousel.js"></script>
 
     <script
       src="https://kit.fontawesome.com/61cec2e747.js"
