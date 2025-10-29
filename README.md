@@ -7,7 +7,7 @@ https://realtimebasecamp.github.io/code-institute-adhd-hacks/
 A simple educational website designed to help people with ADHD. This is not a real website, it is developed to test my skills as part of the Code Institute full stack boot camp first assessment.
 
 ### User value:
-People with ADHD or people who know someone with ADHD can use this website to manage their symtoms easier and become more healthy and productive in day to day life.
+People with ADHD or people who know someone with ADHD can use this website to manage their symptoms easier and become more healthy and productive in day-to-day life.
 
 ### deployment steps:
 1. Github repo > Settings > Code and automation tab > Pages
@@ -18,8 +18,10 @@ People with ADHD or people who know someone with ADHD can use this website to ma
 
 ### Features:
 
-- Feature 1 (Users can learn more about the different types of ADHD)
-- Feature 2 (Users can access ADHD resources )
+1. Users can learn more about the different types of ADHD.
+2. Users can access ADHD resources, covering tips, products, music and videos designed to help manage ADHD symptoms.
+3. The website has a dark/light mode toggle button using custom JS code.
+4. Users can submit enquiries via the contact form.
 
 ### External code sources:
 **Custom CSS from:** Bootstrap library 5.3.8
@@ -27,7 +29,7 @@ People with ADHD or people who know someone with ADHD can use this website to ma
 **All icons are embedded from:** https://fontawesome.com/
 
 ## Wireframes:
-All wireframes were build using [Balsamiq](https://balsamiq.com/).
+All wireframes were built using [Balsamiq](https://balsamiq.com/).
 ![Website wireframes](/assets/images/wireframes.png "Website wireframe diagram")
 
 ## User stories (Linear):
@@ -57,8 +59,11 @@ How AI contributed to performance and UX improvements. Minimal documentation of 
 - ???
 
 ### How AI influenced workflow, focusing on efficiency and outcomes without in-depth prompt documentation:
-I used Github desktop copilot to automatically generate cleaner and more concise comit messages.
-![Github desktop copilot comit message screenshot explaining ai use](/assets/images/github-desktop-copilot.png "Github desktop copilot comit message screenshot explaining ai use")
+I used Github desktop copilot to automatically generate cleaner and more concise commit messages.
+![Github desktop copilot commit message screenshot explaining AI use](/assets/images/github-desktop-copilot.png "Github desktop copilot commit message screenshot explaining AI use")
 
 - ???
 - ???
+
+### Challenges:
+The darkmode toggle was causing an artefact when switching between pages. This was hard to debug but eventually I realised it was caused by the order of operations. The artefact was due to a "Flash of Unstyled Content" (FOUC). To fix this issue I created a script that cached the user theme across the site and accessed it before the HTML elements were rendered. This way the darkmode was applied before any elements were rendered.
