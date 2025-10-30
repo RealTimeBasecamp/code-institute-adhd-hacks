@@ -1,3 +1,25 @@
+/* ===== TYPOGRAPHY ===== */
+/* Google Fonts - Coiny for headings, Momo Trust Sans for body */
+body {
+  font-family: "Momo Trust Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+}
 
 /* Light mode (default) - RETRO THEME */
 /* Color palette inspired by: https://brandguides.brandfolder.com/beautiful-dashboards/themes#retro */
@@ -46,10 +68,17 @@
   --bs-border-color: #ddd9cf !important;      /* Soft warm border tone */
   --bs-border-color-translucent: rgba(255, 177, 66, 0.15) !important;  /* Orange-tinted translucent */
   
+  /* ===== TERTIARY COLOR ===== */
+  /* Used in: .btn-tertiary (third button option) */
+  /* Dark navy - uses body text color as button background */
+  --bs-tertiary: #223459 !important;              /* Dark navy (same as body text color) */
+  --bs-tertiary-rgb: 34, 52, 89 !important;
+  
   /* ===== BUTTON TEXT COLORS ===== */
   /* Light mode: Dark text works well on both orange and purple */
   --bs-btn-primary-color: #000000 !important;    /* Dark navy text on orange primary buttons */
-  --bs-btn-secondary-color: #ffffff !important;  /* Dark navy text on purple secondary buttons */
+  --bs-btn-secondary-color: #ffffff !important;  /* White text on purple secondary buttons */
+  --bs-btn-tertiary-color: #ffffff !important;   /* White text on navy tertiary buttons */
   
   /* ===== BORDER RADIUS ===== */
   /* Bootstrap rounded-5 = 1rem */
@@ -102,10 +131,17 @@
   --bs-border-color: #3d4254 !important;      /* Subtle navy-gray borders */
   --bs-border-color-translucent: rgba(255, 200, 112, 0.15) !important;  /* Orange-tinted translucent */
   
+  /* ===== TERTIARY COLOR ===== */
+  /* Used in: .btn-tertiary (third button option) */
+  /* Light beige - contrasts with dark background */
+  --bs-tertiary: #E9E7E1 !important;              /* Light beige (same as light mode body bg) */
+  --bs-tertiary-rgb: 233, 231, 225 !important;
+  
   /* ===== BUTTON TEXT COLORS ===== */
   /* Dark mode: Swapped for better contrast - light text on both buttons */
-  --bs-btn-primary-color: #000000 !important;    /* Light text on orange primary buttons */
-  --bs-btn-secondary-color: #ffffff !important;  /* Light text on purple secondary buttons */
+  --bs-btn-primary-color: #000000 !important;    /* Dark text on orange primary buttons */
+  --bs-btn-secondary-color: #ffffff !important;  /* White text on purple secondary buttons */
+  --bs-btn-tertiary-color: #1a1d2e !important;   /* Dark text on light beige tertiary buttons */
   
   /* ===== BORDER RADIUS ===== */
   /* Bootstrap rounded-5 = 1rem */
@@ -151,6 +187,23 @@
   --bs-btn-disabled-border-color: rgba(var(--bs-secondary-rgb), 0.5) !important;
 }
 
+/* Tertiary Button - .btn-tertiary */
+/* Used in: Alternative action buttons */
+.btn-tertiary {
+  --bs-btn-color: var(--bs-btn-tertiary-color) !important;
+  --bs-btn-bg: var(--bs-tertiary) !important;
+  --bs-btn-border-color: var(--bs-tertiary) !important;
+  --bs-btn-hover-color: var(--bs-btn-tertiary-color) !important;
+  --bs-btn-hover-bg: rgba(var(--bs-tertiary-rgb), 0.85) !important;
+  --bs-btn-hover-border-color: rgba(var(--bs-tertiary-rgb), 0.85) !important;
+  --bs-btn-active-color: var(--bs-btn-tertiary-color) !important;
+  --bs-btn-active-bg: rgba(var(--bs-tertiary-rgb), 0.75) !important;
+  --bs-btn-active-border-color: rgba(var(--bs-tertiary-rgb), 0.75) !important;
+  --bs-btn-disabled-color: var(--bs-btn-tertiary-color) !important;
+  --bs-btn-disabled-bg: rgba(var(--bs-tertiary-rgb), 0.5) !important;
+  --bs-btn-disabled-border-color: rgba(var(--bs-tertiary-rgb), 0.5) !important;
+}
+
 /* Outline Primary Button - .btn-outline-primary */
 /* Used in: Radio button toggle labels (ADHD type selector) */
 .btn-outline-primary {
@@ -189,8 +242,13 @@
    Apply to all button variants (except outline buttons used for radio toggles)
    ============================================ */
 
-.btn:not(.btn-outline-primary) {
+.btn:not(.btn-outline-primary):not(.btn-tertiary) {
   border-radius: 50rem !important; /* Fully rounded ends = capsule/pill shape */
+}
+
+/* Tertiary button gets capsule shape too */
+.btn-tertiary {
+  border-radius: 50rem !important;
 }
 
 /* ============================================
