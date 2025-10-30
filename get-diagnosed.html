@@ -107,7 +107,7 @@
                   <div class="mt-auto p-3">
                     <a
                       href="https://adhduk.co.uk/right-to-choose/"
-                      class="btn btn-primary"
+                      class="btn btn-secondary"
                       >Visit NHS Right to Choose</a
                     >
                   </div>
@@ -133,7 +133,7 @@
                   <div class="mt-auto p-3">
                     <a
                       href="https://www.problemshared.net/"
-                      class="btn btn-primary"
+                      class="btn btn-secondary"
                       >Visit Problem Shared</a
                     >
                   </div>
@@ -237,89 +237,7 @@
     ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script>
-      const ctx = document.getElementById("adhdPieChart");
-
-      new Chart(ctx, {
-        type: "doughnut",
-        data: {
-          labels: [
-            "Persistent ADHD (2.6%)",
-            "Symptomatic ADHD (6.8%)",
-            "No ADHD (90.6%)",
-          ],
-          datasets: [
-            {
-              label: "Adult ADHD Distribution",
-              data: [2.6, 6.8, 90.6],
-              backgroundColor: [
-                "rgb(255, 99, 132)",
-                "rgb(54, 162, 235)",
-                "rgb(255, 205, 86)",
-              ],
-              hoverOffset: 4,
-            },
-          ],
-        },
-      });
-    </script>
-
-    <script>
-      const ctxBar = document.getElementById("adhdBarChart");
-
-      new Chart(ctxBar, {
-        type: "bar",
-        data: {
-          labels: [
-            "General Population",
-            "Substance Use Treatment",
-            "Ex-Prisoners",
-          ],
-          datasets: [
-            {
-              label: "ADHD Prevalence (%)",
-              data: [6.5, 12, 31],
-              backgroundColor: [
-                "rgba(54, 162, 235, 0.8)",
-                "rgba(255, 206, 86, 0.8)",
-                "rgba(255, 99, 132, 0.8)",
-              ],
-              borderColor: [
-                "rgb(54, 162, 235)",
-                "rgb(255, 206, 86)",
-                "rgb(255, 99, 132)",
-              ],
-              borderWidth: 2,
-            },
-          ],
-        },
-        options: {
-          indexAxis: "y",
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              beginAtZero: true,
-              max: 35,
-              title: {
-                display: true,
-                text: "Percentage (%)",
-              },
-            },
-          },
-          plugins: {
-            legend: {
-              display: false,
-            },
-            title: {
-              display: true,
-              text: "ADHD Prevalence in Different Populations (England)",
-            },
-          },
-        },
-      });
-    </script>
+    <script src="assets/js/charts.js"></script>
 
     <!-- 3x radio button wuth text -->
     <script>
