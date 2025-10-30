@@ -28,6 +28,15 @@ People with ADHD or people who know someone with ADHD can use this website to ma
 
 **All icons are embedded from:** https://fontawesome.com/
 
+## Design:
+https://dummyimage.com/
+Was used to create placeholder images which would contain my responsive charts
+![Dummy image generator](/assets/images/dummy-images.png "Dummy images diagram")
+
+# Implementation:
+https://www.chartjs.org/
+Was used to create the responsive pie and bar charts.
+
 ## Wireframes:
 All wireframes were built using [Balsamiq](https://balsamiq.com/).
 ![Website wireframes](/assets/images/wireframes.png "Website wireframe diagram")
