@@ -152,16 +152,15 @@
                 </p>
               </div>
               <div class="col-4 text-end">
-                <img
-                  src="https://dummyimage.com/256x256/000/fff&text=Pie+chart"
-                  alt=""
-                />
+                <div style="position: relative; height: 300px">
+                  <canvas id="adhdPieChart"></canvas>
+                </div>
               </div>
               <div class="row py-3">
                 <div class="col-12">
                   <img
                     class="w-100"
-                    src="https://dummyimage.com/512x128/000/fff&text=Pie+chart"
+                    src="https://dummyimage.com/512x128/000/fff&text=Bar+chart"
                     alt=""
                   />
                   <p class="justify-">
@@ -228,6 +227,35 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("adhdPieChart");
+
+      new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: [
+            "Persistent ADHD (2.6%)",
+            "Symptomatic ADHD (6.8%)",
+            "No ADHD (90.6%)",
+          ],
+          datasets: [
+            {
+              label: "Adult ADHD Distribution",
+              data: [2.6, 6.8, 90.6],
+              backgroundColor: [
+                "rgb(255, 99, 132)",
+                "rgb(54, 162, 235)",
+                "rgb(255, 205, 86)",
+              ],
+              hoverOffset: 4,
+            },
+          ],
+        },
+      });
+    </script>
 
     <!-- 3x radio button wuth text -->
     <script>
