@@ -1,3 +1,25 @@
+/* ===== TYPOGRAPHY ===== */
+/* Google Fonts - Coiny for headings, Momo Trust Sans for body */
+body {
+  font-family: "Momo Trust Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+}
 
 /* Light mode (default) - RETRO THEME */
 /* Color palette inspired by: https://brandguides.brandfolder.com/beautiful-dashboards/themes#retro */
