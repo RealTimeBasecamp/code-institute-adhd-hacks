@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ADHD Hacks</title>
+    <!-- Inline script to prevent flash of light mode -->
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-bs-theme", savedTheme);
+      })();
+    </script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <nav class="navbar navbar-expand-sm bg-body-tertiary" id="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <i class="fa-solid fa-brain display-6"></i>
+          </a>
+          <!--This button appears when screen size is less than 576px-->
+          <!-- It is not visible as it's toggled automatically-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--This is the collapsible content of all the links-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--ms-auto aligns the list to the right-->
+            <ul class="navbar-nav ms-auto">
+              <!-- Darkmode toggle -->
+
+              <div class="form-check form-switch mt-2" id="dark">
+                <i class="fa-solid fa-moon me-2" id="dark-mode-icon"></i>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="themeSwitch"
+                />
+              </div>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resources.html">Resources</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="get-diagnosed.html">Get Diagnosed</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-fill">
+      <section>
+        <div class="container text-center mt-4">
+          <h1>ADHD Resources</h1>
+          <p>Here are some resources and hacks to help manage ADHD symptoms.</p>
+        </div>
+      </section>
+
+      <!-- Accordion section -->
+      <section>
+        <div class="container my-4">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  <div>
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Just try working for 10 Mins</span>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  If you can try working for <strong>just 10 minutes</strong>,
+                  you might find it easier to continue working afterwards.
+                  Often, starting is the hardest part, and once you've begun,
+                  you may find it easier to keep going. Remember to set a timer
+                  for 10 minutes and focus solely on the task at hand during
+                  that time. After the timer goes off, you can decide whether to
+                  continue working or take a break.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  <div>
+                    <i class="fa-solid fa-cubes-stacked"></i>
+                    <span>Creatine</span>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Creatine is a popular supplement known for its benefits in
+                  enhancing physical performance, particularly in high-intensity
+                  exercise. However, emerging research suggests that creatine
+                  may also have cognitive benefits, including improved memory
+                  and mental fatigue resistance. Some studies indicate that
+                  creatine supplementation could help
+                  <strong> improve cognitive function </strong>
+                  in individuals with ADHD by enhancing brain energy metabolism.
+                  While more research is needed to confirm these effects, taking
+                  creatine as part of a balanced diet may offer potential
+                  benefits for managing ADHD symptoms. Always consult with a
+                  healthcare professional before starting any new supplement.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  <div>
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <span>Work out</span>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Regular physical exercise can
+                  <strong> significantly help individuals with ADHD</strong>
+                  manage ADHD symptoms. Exercise increases the production of
+                  neurotransmitters like dopamine and norepinephrine, which play
+                  key roles in attention and focus. Engaging in activities such
+                  as aerobic exercise, strength training, or even yoga can
+                  improve mood, reduce anxiety, and enhance cognitive function.
+                  Aim for at least 30 minutes of moderate exercise most days of
+                  the week. Incorporating physical activity into your daily
+                  routine can lead to better symptom management and overall
+                  well-being.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  <div>
+                    <i class="fa-solid fa-beer-mug-empty"></i>
+                    <span>Avoid alcohol</span>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Alcohol can significantly worsen ADHD symptoms by disrupting
+                  sleep quality, <strong>reducing executive function</strong>,
+                  and interfering with medication effectiveness. It can impair
+                  focus, memory, and impulse control—areas already challenging
+                  for those with ADHD. Additionally, alcohol affects dopamine
+                  levels in the brain, which can exacerbate attention and
+                  motivation issues. If you choose to drink, do so in moderation
+                  and be mindful of how it affects your symptoms and overall
+                  functioning.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  <div>
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Stop eating 4 hours before bed</span>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Eating close to bedtime can disrupt sleep quality by keeping
+                  your digestive system active when your body should be winding
+                  down. Poor sleep
+                  <strong>significantly impacts ADHD symptoms</strong>, making
+                  focus and emotional regulation even more difficult. Try to
+                  finish your last meal at least 4 hours before bed to give your
+                  body time to digest. If you need a snack, opt for something
+                  light and avoid sugary or caffeinated foods. Better sleep
+                  hygiene leads to better symptom management during the day.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  <div>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <span>No screens 1 hour before bed</span>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  The blue light emitted by phones, tablets, and computers
+                  suppresses melatonin production, making it harder to fall
+                  asleep. For people with ADHD, who often already struggle with
+                  sleep issues, this can be particularly problematic.
+                  <strong
+                    >Establish a screen-free routine at least one hour before
+                    bedtime.</strong
+                  >
+                  Instead, try reading a physical book, listening to calming
+                  music, doing light stretches, or practicing relaxation
+                  techniques. This helps signal to your brain that it's time to
+                  wind down and prepare for sleep.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven"
+                >
+                  <div>
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <span>Heart rate as low as possible before bed</span>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="collapseSeven"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>A lower heart rate before bed</strong> indicates that
+                  your body is in a relaxed, parasympathetic state—ideal for
+                  quality sleep. Avoid intense exercise, stressful activities,
+                  or stimulating content in the evening. Practice calming
+                  activities like deep breathing exercises, progressive muscle
+                  relaxation, or gentle yoga to help lower your heart rate.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseEight"
+                  aria-expanded="false"
+                  aria-controls="collapseEight"
+                >
+                  <div>
+                    <i class="fa-solid fa-stopwatch"></i>
+                    <span>Pomodoro timer</span>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="collapseEight"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  The Pomodoro Technique is a time management method that can be
+                  <strong>particularly effective for ADHD.</strong> Work in
+                  focused 25-minute intervals (called "Pomodoros") followed by
+                  5-minute breaks. After completing four Pomodoros, take a
+                  longer 15-30 minute break. This technique helps maintain focus
+                  by breaking work into manageable chunks and provides regular
+                  rewards (breaks) to keep motivation high. The structured
+                  approach reduces overwhelm and makes it easier to start tasks,
+                  while the timer creates a sense of urgency that can help
+                  combat procrastination.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseNine"
+                  aria-expanded="false"
+                  aria-controls="collapseNine"
+                >
+                  <div>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>10K Lux Light</span>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="collapseNine"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Light therapy using a 10,000 lux light box can help regulate
+                  circadian rhythms and improve sleep-wake cycles,
+                  <strong>which are often disrupted in people with ADHD</strong
+                  >. Exposure to bright light in the morning can increase
+                  alertness, improve mood, and help with focus throughout the
+                  day. Use the light box for 20-30 minutes each morning, ideally
+                  within the first hour of waking. Position it at eye level
+                  about 16-24 inches away. This can be especially helpful during
+                  darker winter months or if you struggle with morning alertness
+                  and delayed sleep phase syndrome.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTen"
+                  aria-expanded="false"
+                  aria-controls="collapseTen"
+                >
+                  <div>
+                    <i class="fa-solid fa-mobile-button"></i>
+                    <span>PushMe Android app</span>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="collapseTen"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.snad.pushme.pushme&hl=en_GB"
+                    >PushMe</a
+                  >
+                  is an Android app designed to help manage tasks and reminders
+                  through persistent notifications. For people with ADHD, out of
+                  sight truly means out of mind. This app keeps important tasks
+                  visible on your notification bar until you complete them,
+                  acting as a constant but gentle reminder. You can set up
+                  custom notifications for medication reminders, task deadlines,
+                  habit tracking, or any other important activities.
+                  <strong>
+                    The visual persistence helps combat the common ADHD
+                    challenge
+                  </strong>
+                  of forgetting tasks the moment they're not in immediate view.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container text-center pb-3">
+          <p>Want to add your own ADHD hacks?</p>
+          <a href="contact.html" class="btn btn-primary">Submit</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="container text-center p-4">
+          <h2 class="p-3">ADHD Products</h2>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="card">
+                <a
+                  href="https://www.nutritiongeeks.co/products/pure-creatine-monohydrate"
+                >
+                  <img
+                    src="assets/images/creatine-monohydrate.webp"
+                    class="card-img-top"
+                    alt="Creatine Monohydrate"
+                    style="
+                      height: 200px;
+                      object-fit: contain;
+                      background-color: #f8f9fa;
+                    "
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Creatine Monohydrate</h5>
+                  <p class="card-text">
+                    Creatine Monohydrate is a popular supplement known for its
+                    benefits in enhancing physical performance, particularly in
+                    high-intensity exercise. However, emerging research suggests
+                    that creatine may also have cognitive benefits, including
+                    improved memory and mental fatigue resistance.
+                  </p>
+                  <a
+                    class="btn btn-primary"
+                    href="https://www.nutritiongeeks.co/products/pure-creatine-monohydrate"
+                    >Buy Now</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <a
+                  href="https://www.nutritiongeeks.co/products/magnesium-glycinate-3-in-1"
+                >
+                  <img
+                    src="assets/images/magnesium-glycinate.webp"
+                    class="card-img-top"
+                    alt="Magnesium Glycinate 3-in-1"
+                    style="
+                      height: 200px;
+                      object-fit: contain;
+                      background-color: #f8f9fa;
+                    "
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Magnesium Glycinate 3-in-1</h5>
+                  <p class="card-text">
+                    Magnesium Glycinate 3-in-1 is a unique supplement that
+                    combines the benefits of magnesium with other key nutrients
+                    to support relaxation, stress relief, and cognitive
+                    function. This formula is designed to enhance the
+                    bioavailability of magnesium, making it more effective for
+                    those with ADHD.
+                  </p>
+                  <a
+                    class="btn btn-primary"
+                    href="https://www.nutritiongeeks.co/products/magnesium-glycinate-3-in-1"
+                    >Buy Now</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <a
+                  href="https://www.nutritiongeeks.co/products/lions-mane-focus"
+                >
+                  <img
+                    src="assets/images/lions-mane.webp"
+                    class="card-img-top"
+                    alt="Lions Mane"
+                    style="
+                      height: 200px;
+                      object-fit: contain;
+                      background-color: #f8f9fa;
+                    "
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Lions Mane</h5>
+                  <p class="card-text">
+                    Lions Mane is a medicinal mushroom known for its potential
+                    cognitive benefits, including improved focus, memory, and
+                    overall brain health. It may also help reduce symptoms of
+                    anxiety and depression, making it a popular choice for those
+                    with ADHD.
+                  </p>
+                  <a
+                    class="btn btn-primary"
+                    href="https://www.nutritiongeeks.co/products/lions-mane-focus"
+                    >Buy Now</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <a
+                  href="https://www.nutritiongeeks.co/collections/vitamin-d-supplements/products/vitamin-d3-4000iu-k2"
+                >
+                  <img
+                    src="assets/images/vitamin-d3k2.webp"
+                    class="card-img-top"
+                    alt="Vitamin D3 4000iu + K2"
+                    style="
+                      height: 200px;
+                      object-fit: contain;
+                      background-color: #f8f9fa;
+                    "
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Vitamin D3 4000iu + K2</h5>
+                  <p class="card-text">
+                    Vitamin D3 4000iu + K2 is a powerful combination that
+                    supports bone health, immune function, and cardiovascular
+                    health. This formula is designed to enhance the absorption
+                    of calcium and promote overall well-being, making it an
+                    excellent choice for those with ADHD.
+                  </p>
+                  <a
+                    class="btn btn-primary"
+                    href="https://www.nutritiongeeks.co/collections/vitamin-d-supplements/products/vitamin-d3-4000iu-k2"
+                    >Buy Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADHD resources section -->
+      <section>
+        <div class="container text-center mt-4">
+          <h2>ADHD Focus</h2>
+          <p>
+            432Hz is a frequency that is believed by some to promote relaxation
+            and focus. Listening to music or sounds tuned to 432Hz may help
+            improve concentration and reduce anxiety.
+          </p>
+          <iframe
+            data-testid="embed-iframe"
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/episode/2S5peBb7JqPhn77HyfeyLp?utm_source=generator&theme=0"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <p>
+            Link not showing? Click
+            <a
+              href="https://open.spotify.com/episode/2S5peBb7JqPhn77HyfeyLp?utm_source=generator&theme=0"
+              >here</a
+            >
+            to listen.
+          </p>
+        </div>
+      </section>
+
+      <!-- ADHD Videos Carousel Section -->
+      <section class="container py-5">
+        <div class="row mb-2">
+          <div class="col-12">
+            <div class="text-center">
+              <h2 class="fw-bold">ADHD Videos</h2>
+              <p class="fw-bold">Watch helpful videos about ADHD management</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Active Video Carousel with Greyed Background -->
+        <div class="row justify-content-center">
+          <div class="col-12 col-xl-6">
+            <div class="position-relative overflow-hidden mx-auto">
+              <!-- Previous Button -->
+              <button
+                class="position-absolute btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
+                style="
+                  width: 2.5rem;
+                  height: 2.5rem;
+                  z-index: 1000;
+                  background-color: rgba(0, 0, 0, 0.7);
+                  border: none;
+                  left: 0.5rem;
+                  top: 50%;
+                  transform: translateY(-50%);
+                "
+                onclick="changeVideo(-1)"
+                aria-label="Previous video"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                  style="width: 1.25rem; height: 1.25rem"
+                ></span>
+              </button>
+
+              <!-- Next Button -->
+              <button
+                class="position-absolute btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
+                style="
+                  width: 2.5rem;
+                  height: 2.5rem;
+                  z-index: 1000;
+                  background-color: rgba(0, 0, 0, 0.7);
+                  border: none;
+                  right: 0.5rem;
+                  top: 50%;
+                  transform: translateY(-50%);
+                "
+                onclick="changeVideo(1)"
+                aria-label="Next video"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                  style="width: 1.25rem; height: 1.25rem"
+                ></span>
+              </button>
+
+              <!-- Video Container -->
+              <div
+                class="position-relative mx-auto"
+                style="width: 100%; max-width: 18.75rem"
+                id="video-carousel-container"
+              >
+                <!-- Videos will be generated automatically by carousel.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Generic footer buttons -->
+      <section>
+        <div class="container text-center p-3">
+          <div class="row text-center">
+            <div class="col-12">
+              <a href="#navbar" class="btn btn-secondary">Back to Home</a>
+              <a href="contact.html" class="btn btn-primary">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container-fluid bg-body-tertiary text-center pt-3 mt-4">
+        <i class="fa-solid fa-brain h2"></i>
+        <h2>ADHD Hacks</h2>
+        <br />
+        <div>
+          <i class="fa-brands fa-instagram h4"></i>
+          <i class="fa-brands fa-youtube h4"></i>
+          <i class="fa-brands fa-linkedin h4"></i>
+        </div>
+
+        <p class="mb-0">&copy; 2025 ADHD Hacks. All rights reserved.</p>
+        <a
+          href="https://github.com/RealTimeBasecamp/code-institute-adhd-hacks"
+          class="fa-brands fa-github text-black"
+          style="text-decoration: none"
+        ></a>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Video Carousel Script -->
+    <script src="assets/js/carousel.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/61cec2e747.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Darkmode toggle logic -->
+    <script>
+      const html = document.documentElement;
+      const themeSwitch = document.getElementById("themeSwitch");
+      const darkModeIcon = document.getElementById("dark-mode-icon");
+
+      // Restore the toggle switch state based on saved theme
+      const savedTheme = localStorage.getItem("theme") || "light";
+      themeSwitch.checked = savedTheme === "dark";
+      darkModeIcon.classList.toggle("fa-sun", savedTheme === "dark");
+      darkModeIcon.classList.toggle("fa-moon", savedTheme === "light");
+
+      themeSwitch.addEventListener("change", () => {
+        const theme = themeSwitch.checked ? "dark" : "light";
+        html.dataset.bsTheme = theme;
+        localStorage.setItem("theme", theme);
+        darkModeIcon.classList.toggle("fa-sun", themeSwitch.checked);
+        darkModeIcon.classList.toggle("fa-moon", !themeSwitch.checked);
+      });
+    </script>
+  </body>
+</html>
