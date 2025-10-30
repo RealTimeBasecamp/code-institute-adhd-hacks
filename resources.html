@@ -4,6 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ADHD Hacks</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/favicon/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
     <!-- Inline script to prevent flash of light mode -->
     <script>
       (function () {
@@ -17,12 +41,17 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body class="d-flex flex-column min-vh-100">
+  <body class="d-flex flex-column min-vh-100 bg-gradient">
     <header>
-      <nav class="navbar navbar-expand-sm bg-body-tertiary" id="navbar">
+      <nav class="navbar navbar-expand-sm bg-transparent" id="navbar">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <a
+            class="navbar-brand"
+            href="index.html"
+            aria-label="ADHD Hacks Home"
+          >
             <i class="fa-solid fa-brain display-6"></i>
           </a>
           <!--This button appears when screen size is less than 576px-->
@@ -46,12 +75,17 @@
               <!-- Darkmode toggle -->
 
               <div class="form-check form-switch mt-2" id="dark">
-                <i class="fa-solid fa-moon me-2" id="dark-mode-icon"></i>
+                <i
+                  class="fa-solid fa-moon me-2"
+                  id="dark-mode-icon"
+                  aria-hidden="true"
+                ></i>
                 <input
                   class="form-check-input"
                   type="checkbox"
                   role="switch"
                   id="themeSwitch"
+                  aria-label="Toggle dark mode"
                 />
               </div>
               <li class="nav-item">
@@ -73,16 +107,16 @@
     </header>
 
     <main class="flex-fill">
-      <section>
-        <div class="container text-center mt-4">
+      <section class="container">
+        <div class="text-center">
           <h1>ADHD Resources</h1>
           <p>Here are some resources and hacks to help manage ADHD symptoms.</p>
         </div>
       </section>
 
       <!-- Accordion section -->
-      <section>
-        <div class="container my-4">
+      <section class="container">
+        <div class="container">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -438,15 +472,15 @@
             </div>
           </div>
         </div>
-        <div class="container text-center pb-3">
+        <div class="container text-center">
           <p>Want to add your own ADHD hacks?</p>
           <a href="contact.html" class="btn btn-primary">Submit</a>
         </div>
       </section>
 
-      <section>
-        <div class="container text-center p-4">
-          <h2 class="p-3">ADHD Products</h2>
+      <section class="container">
+        <div class="text-center">
+          <h2>ADHD Products</h2>
           <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
               <div class="card">
@@ -457,11 +491,7 @@
                     src="assets/images/creatine-monohydrate.webp"
                     class="card-img-top"
                     alt="Creatine Monohydrate"
-                    style="
-                      height: 200px;
-                      object-fit: contain;
-                      background-color: #f8f9fa;
-                    "
+                    style="height: 200px; object-fit: contain"
                   />
                 </a>
                 <div class="card-body">
@@ -490,11 +520,7 @@
                     src="assets/images/magnesium-glycinate.webp"
                     class="card-img-top"
                     alt="Magnesium Glycinate 3-in-1"
-                    style="
-                      height: 200px;
-                      object-fit: contain;
-                      background-color: #f8f9fa;
-                    "
+                    style="height: 200px; object-fit: contain"
                   />
                 </a>
                 <div class="card-body">
@@ -524,11 +550,7 @@
                     src="assets/images/lions-mane.webp"
                     class="card-img-top"
                     alt="Lions Mane"
-                    style="
-                      height: 200px;
-                      object-fit: contain;
-                      background-color: #f8f9fa;
-                    "
+                    style="height: 200px; object-fit: contain"
                   />
                 </a>
                 <div class="card-body">
@@ -557,11 +579,7 @@
                     src="assets/images/vitamin-d3k2.webp"
                     class="card-img-top"
                     alt="Vitamin D3 4000iu + K2"
-                    style="
-                      height: 200px;
-                      object-fit: contain;
-                      background-color: #f8f9fa;
-                    "
+                    style="height: 200px; object-fit: contain"
                   />
                 </a>
                 <div class="card-body">
@@ -586,25 +604,27 @@
       </section>
 
       <!-- ADHD resources section -->
-      <section>
-        <div class="container text-center mt-4">
+      <section class="container">
+        <div class="text-center">
           <h2>ADHD Focus</h2>
           <p>
             432Hz is a frequency that is believed by some to promote relaxation
             and focus. Listening to music or sounds tuned to 432Hz may help
             improve concentration and reduce anxiety.
           </p>
-          <iframe
-            data-testid="embed-iframe"
-            style="border-radius: 12px"
-            src="https://open.spotify.com/embed/episode/2S5peBb7JqPhn77HyfeyLp?utm_source=generator&theme=0"
-            width="100%"
-            height="152"
-            frameborder="0"
-            allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
+          <div id="spotify-embed">
+            <iframe
+              data-testid="embed-iframe"
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/episode/2S5peBb7JqPhn77HyfeyLp?utm_source=generator&theme=0"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
           <p>
             Link not showing? Click
             <a
@@ -617,7 +637,7 @@
       </section>
 
       <!-- ADHD Videos Carousel Section -->
-      <section class="container py-5">
+      <section class="container">
         <div class="row mb-2">
           <div class="col-12">
             <div class="text-center">
@@ -692,7 +712,7 @@
 
       <!-- Generic footer buttons -->
       <section>
-        <div class="container text-center p-3">
+        <div class="container text-center">
           <div class="row text-center">
             <div class="col-12">
               <a href="index.html" class="btn btn-secondary">Back to Home</a>
@@ -704,14 +724,35 @@
     </main>
 
     <footer>
-      <div class="container-fluid bg-body-tertiary text-center pt-3 mt-4">
+      <div class="container-fluid bg-body-tertiary text-center">
         <i class="fa-solid fa-brain h2"></i>
         <h2>ADHD Hacks</h2>
         <br />
         <div>
-          <i class="fa-brands fa-instagram h4"></i>
-          <i class="fa-brands fa-youtube h4"></i>
-          <i class="fa-brands fa-linkedin h4"></i>
+          <a
+            href="https://www.instagram.com/"
+            class="fa-brands fa-instagram h4"
+            style="text-decoration: none"
+            aria-label="Visit our Instagram page"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
+          <a
+            href="https://www.youtube.com/"
+            class="fa-brands fa-youtube h4"
+            style="text-decoration: none"
+            aria-label="Visit our YouTube channel"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
+          <a
+            href="https://www.linkedin.com/"
+            class="fa-brands fa-linkedin h4"
+            style="text-decoration: none"
+            aria-label="Visit our LinkedIn page"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
         </div>
 
         <p class="mb-0">&copy; 2025 ADHD Hacks. All rights reserved.</p>
@@ -719,6 +760,9 @@
           href="https://github.com/RealTimeBasecamp/code-institute-adhd-hacks"
           class="fa-brands fa-github text-black"
           style="text-decoration: none"
+          aria-label="View source code on GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
         ></a>
       </div>
     </footer>

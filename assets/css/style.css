@@ -1,0 +1,547 @@
+
+/* Light mode (default) - RETRO THEME */
+/* Color palette inspired by: https://brandguides.brandfolder.com/beautiful-dashboards/themes#retro */
+[data-bs-theme="light"] {
+  /* ===== PRIMARY COLOR ===== */
+  /* Used in: .btn-primary, .btn-outline-primary, links */
+  /* Warm orange - vibrant, energetic, retro accent */
+  --bs-primary: #FFB142 !important;           /* Retro warm orange (Chart 5 color) */
+  --bs-primary-rgb: 255, 177, 66 !important;  /* Same color as RGB for hover/transparency effects */
+  
+  /* ===== SECONDARY COLOR ===== */
+  /* Used in: .btn-secondary (footer "Back to Home" buttons) */
+  /* Rich purple - retro, creative, distinctive */
+  --bs-secondary: #6A5AAA !important;         /* Retro purple accent color */
+  --bs-secondary-rgb: 106, 90, 170 !important;  /* Same color as RGB for hover/transparency effects */
+  
+  /* ===== BODY COLORS ===== */
+  /* Base background and text colors for entire site */
+  --bs-body-bg: #E9E7E1 !important;           /* Warm off-white background (retro paper tone) */
+  --bs-body-color: #223459 !important;        /* Primary text: Dark navy for excellent contrast */
+  --bs-body-bg-rgb: 233, 231, 225 !important;
+  --bs-body-color-rgb: 34, 52, 89 !important;
+  
+  /* ===== SECONDARY TEXT COLOR ===== */
+  /* Used for less prominent text, captions, labels */
+  --bs-secondary-color: #6A5AAA !important;   /* Secondary text: Retro purple */
+  --bs-secondary-color-rgb: 106, 90, 170 !important;
+  
+  /* ===== TERTIARY BACKGROUND ===== */
+  /* Used in: bg-body-tertiary (footer, list-group-items) */
+  --bs-tertiary-bg: #F2F1ED !important;       /* Warm light beige (cards/widgets/tiles) */
+  --bs-tertiary-bg-rgb: 242, 241, 237 !important;
+  
+  /* ===== LIGHT SUBTLE ===== */
+  /* Used in: bg-light-subtle (video container) */
+  --bs-light-bg-subtle: #F2F1ED !important;   /* Same as cards/widgets for consistency */
+  
+  /* ===== DARK COLOR ===== */
+  /* Used in: .btn-dark (carousel navigation buttons in resources.html) */
+  --bs-dark: #223459 !important;              /* Dark navy blue */
+  --bs-dark-rgb: 34, 52, 89 !important;
+  
+  /* ===== CARD & BORDER ===== */
+  /* Used in: .card components and border utilities */
+  --bs-card-bg: #F2F1ED !important;           /* Warm beige card/widget background */
+  --bs-border-color: #ddd9cf !important;      /* Soft warm border tone */
+  --bs-border-color-translucent: rgba(255, 177, 66, 0.15) !important;  /* Orange-tinted translucent */
+  
+  /* ===== BUTTON TEXT COLORS ===== */
+  /* Light mode: Dark text works well on both orange and purple */
+  --bs-btn-primary-color: #000000 !important;    /* Dark navy text on orange primary buttons */
+  --bs-btn-secondary-color: #ffffff !important;  /* Dark navy text on purple secondary buttons */
+  
+  /* ===== BORDER RADIUS ===== */
+  /* Bootstrap rounded-5 = 1rem */
+  --bs-border-radius-lg: 1rem !important;
+}
+
+/* Dark mode - Based on Retro theme with adjusted contrast */
+[data-bs-theme="dark"] {
+  /* ===== PRIMARY COLOR ===== */
+  /* Used in: .btn-primary, .btn-outline-primary, links */
+  /* Lighter, more saturated orange for visibility on dark backgrounds */
+  --bs-primary: #FFB142 !important;           /* Lighter warm orange (brighter than light mode #FFB142) */
+  --bs-primary-rgb: 255, 200, 112 !important;
+  
+  /* ===== SECONDARY COLOR ===== */
+  /* Used in: .btn-secondary (footer "Back to Home" buttons) */
+  /* Lighter purple with increased saturation for dark mode */
+  --bs-secondary: #6A5AAA !important;         /* Lighter purple (brighter than light mode #6A5AAA) */
+  --bs-secondary-rgb: 139, 123, 200 !important;
+  
+  /* ===== BODY COLORS ===== */
+  /* Base background and text colors for entire site in dark mode */
+  --bs-body-bg: #1a1d2e !important;           /* Dark navy background (inverted from light mode navy text #223459) */
+  --bs-body-color: #E9E7E1 !important;        /* Light text (same as light mode background for consistency) */
+  --bs-body-bg-rgb: 26, 29, 46 !important;
+  --bs-body-color-rgb: 233, 231, 225 !important;
+  
+  /* ===== SECONDARY TEXT COLOR ===== */
+  /* Used for less prominent text, captions, labels */
+  --bs-secondary-color: #A394D4 !important;   /* Lighter purple for secondary text */
+  --bs-secondary-color-rgb: 163, 148, 212 !important;
+  
+  /* ===== TERTIARY BACKGROUND ===== */
+  /* Used in: bg-body-tertiary (footer, list-group-items) - slightly lighter than body */
+  --bs-tertiary-bg: #252939 !important;       /* Slightly lighter navy than body background */
+  --bs-tertiary-bg-rgb: 37, 41, 57 !important;
+  
+  /* ===== LIGHT SUBTLE ===== */
+  /* Used in: bg-light-subtle (video container) */
+  --bs-light-bg-subtle: #2a2f42 !important;   /* Medium navy for containers */
+  
+  /* ===== DARK COLOR ===== */
+  /* Used in: .btn-dark (carousel navigation buttons in resources.html) */
+  --bs-dark: #3d4254 !important;              /* Medium-dark navy-gray */
+  --bs-dark-rgb: 61, 66, 84 !important;
+  
+  /* ===== CARD & BORDER ===== */
+  /* Used in: .card components and border utilities */
+  --bs-card-bg: #252939 !important;           /* Cards slightly lighter than body (matching tertiary-bg) */
+  --bs-border-color: #3d4254 !important;      /* Subtle navy-gray borders */
+  --bs-border-color-translucent: rgba(255, 200, 112, 0.15) !important;  /* Orange-tinted translucent */
+  
+  /* ===== BUTTON TEXT COLORS ===== */
+  /* Dark mode: Swapped for better contrast - light text on both buttons */
+  --bs-btn-primary-color: #000000 !important;    /* Light text on orange primary buttons */
+  --bs-btn-secondary-color: #ffffff !important;  /* Light text on purple secondary buttons */
+  
+  /* ===== BORDER RADIUS ===== */
+  /* Bootstrap rounded-5 = 1rem */
+  --bs-border-radius-lg: 1rem !important;
+}
+
+/* ============================================
+   BUTTON STYLING - All States
+   Uses CSS variables to automatically adapt to light/dark mode
+   ============================================ */
+
+/* Primary Button - .btn-primary */
+/* Used in: Most action buttons (Submit, Get Help, Explore Resources, etc.) */
+.btn-primary {
+  --bs-btn-color: var(--bs-btn-primary-color) !important;
+  --bs-btn-bg: var(--bs-primary) !important;
+  --bs-btn-border-color: var(--bs-primary) !important;
+  --bs-btn-hover-color: var(--bs-btn-primary-color) !important;
+  --bs-btn-hover-bg: rgba(var(--bs-primary-rgb), 0.85) !important;
+  --bs-btn-hover-border-color: rgba(var(--bs-primary-rgb), 0.85) !important;
+  --bs-btn-active-color: var(--bs-btn-primary-color) !important;
+  --bs-btn-active-bg: rgba(var(--bs-primary-rgb), 0.75) !important;
+  --bs-btn-active-border-color: rgba(var(--bs-primary-rgb), 0.75) !important;
+  --bs-btn-disabled-color: var(--bs-btn-primary-color) !important;
+  --bs-btn-disabled-bg: rgba(var(--bs-primary-rgb), 0.5) !important;
+  --bs-btn-disabled-border-color: rgba(var(--bs-primary-rgb), 0.5) !important;
+}
+
+/* Secondary Button - .btn-secondary */
+/* Used in: "Back to Home" footer buttons */
+.btn-secondary {
+  --bs-btn-color: var(--bs-btn-secondary-color) !important;
+  --bs-btn-bg: var(--bs-secondary) !important;
+  --bs-btn-border-color: var(--bs-secondary) !important;
+  --bs-btn-hover-color: var(--bs-btn-secondary-color) !important;
+  --bs-btn-hover-bg: rgba(var(--bs-secondary-rgb), 0.85) !important;
+  --bs-btn-hover-border-color: rgba(var(--bs-secondary-rgb), 0.85) !important;
+  --bs-btn-active-color: var(--bs-btn-secondary-color) !important;
+  --bs-btn-active-bg: rgba(var(--bs-secondary-rgb), 0.75) !important;
+  --bs-btn-active-border-color: rgba(var(--bs-secondary-rgb), 0.75) !important;
+  --bs-btn-disabled-color: var(--bs-btn-secondary-color) !important;
+  --bs-btn-disabled-bg: rgba(var(--bs-secondary-rgb), 0.5) !important;
+  --bs-btn-disabled-border-color: rgba(var(--bs-secondary-rgb), 0.5) !important;
+}
+
+/* Outline Primary Button - .btn-outline-primary */
+/* Used in: Radio button toggle labels (ADHD type selector) */
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary) !important;
+  --bs-btn-border-color: var(--bs-primary) !important;
+  --bs-btn-hover-color: var(--bs-body-color) !important;
+  --bs-btn-hover-bg: var(--bs-primary) !important;
+  --bs-btn-hover-border-color: var(--bs-primary) !important;
+  --bs-btn-active-color: var(--bs-body-color) !important;
+  --bs-btn-active-bg: var(--bs-primary) !important;
+  --bs-btn-active-border-color: var(--bs-primary) !important;
+  --bs-btn-disabled-color: var(--bs-primary) !important;
+  --bs-btn-disabled-bg: transparent !important;
+  --bs-btn-disabled-border-color: var(--bs-primary) !important;
+}
+
+/* Dark Button - .btn-dark */
+/* Used in: Carousel navigation buttons (resources.html) */
+.btn-dark {
+  --bs-btn-color: var(--bs-body-bg) !important;
+  --bs-btn-bg: var(--bs-dark) !important;
+  --bs-btn-border-color: var(--bs-dark) !important;
+  --bs-btn-hover-color: var(--bs-body-bg) !important;
+  --bs-btn-hover-bg: rgba(var(--bs-dark-rgb), 1.2) !important;
+  --bs-btn-hover-border-color: rgba(var(--bs-dark-rgb), 1.2) !important;
+  --bs-btn-active-color: var(--bs-body-bg) !important;
+  --bs-btn-active-bg: rgba(var(--bs-dark-rgb), 1.4) !important;
+  --bs-btn-active-border-color: rgba(var(--bs-dark-rgb), 1.4) !important;
+  --bs-btn-disabled-color: var(--bs-body-bg) !important;
+  --bs-btn-disabled-bg: rgba(var(--bs-dark-rgb), 0.5) !important;
+  --bs-btn-disabled-border-color: rgba(var(--bs-dark-rgb), 0.5) !important;
+}
+
+/* ============================================
+   CAPSULE/PILL BUTTON STYLING
+   Apply to all button variants (except outline buttons used for radio toggles)
+   ============================================ */
+
+.btn:not(.btn-outline-primary) {
+  border-radius: 50rem !important; /* Fully rounded ends = capsule/pill shape */
+}
+
+/* ============================================
+   CARD & LIST GROUP STYLING
+   ============================================ */
+
+/* Cards - .card */
+/* Used in: All card components throughout the site */
+/* Uses CSS variables so it adapts to light/dark mode */
+.card {
+  background-color: var(--bs-tertiary-bg) !important;
+  border-color: var(--bs-border-color) !important;
+  color: var(--bs-body-color) !important;
+  border-radius: var(--bs-border-radius-lg) !important; /* Bootstrap's rounded-4 = 0.5rem */
+  overflow: hidden; /* Ensures images respect rounded corners */
+}
+
+.card-body {
+  background-color: var(--bs-tertiary-bg) !important;
+  color: var(--bs-body-color) !important;
+  padding: 1.5rem !important; /* Generous padding for all cards */
+}
+
+/* Reduce card padding on small screens */
+@media (max-width: 575.98px) {
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  .card.m-3 {
+    margin: 1rem !important;
+  }
+  
+  .card.pt-3 {
+    padding-top: 1rem !important;
+  }
+}
+
+.card-title {
+  color: var(--bs-body-color) !important;
+}
+
+/* Image background for dark mode */
+.img-bg-white-dark {
+  background-color: transparent;
+  padding: 0.5rem;
+}
+
+[data-bs-theme="dark"] .img-bg-white-dark {
+  background-color: #F2F1ED;
+}
+
+/* Card-style container - applies card visual styling without disrupting layout */
+.card-style {
+  background-color: var(--bs-tertiary-bg) !important;
+  border: 1px solid var(--bs-border-color) !important;
+  border-radius: var(--bs-border-radius-lg) !important;
+  color: var(--bs-body-color) !important;
+}
+
+.card-text {
+  color: var(--bs-body-color) !important;
+}
+
+/* List Group Items - .list-group-item */
+/* Used in: ADHD traits checklist items */
+.list-group-item {
+  --bs-list-group-bg: var(--bs-tertiary-bg) !important;
+  --bs-list-group-border-color: var(--bs-border-color) !important;
+  --bs-list-group-color: var(--bs-body-color) !important;
+}
+
+/* Accordion - .accordion */
+/* Used in: Accordion components */
+/* Uses CSS variables so it adapts to light/dark mode */
+.accordion {
+  --bs-accordion-bg: var(--bs-tertiary-bg) !important;
+  --bs-accordion-border-color: var(--bs-border-color) !important;
+  --bs-accordion-btn-bg: var(--bs-tertiary-bg) !important;
+  --bs-accordion-btn-color: var(--bs-body-color) !important;
+  --bs-accordion-active-bg: var(--bs-tertiary-bg) !important;
+  --bs-accordion-active-color: var(--bs-body-color) !important;
+  --bs-accordion-border-radius: var(--bs-border-radius-lg) !important; /* Rounded corners */
+  max-width: 800px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the accordion */
+}
+
+.accordion-item {
+  background-color: var(--bs-tertiary-bg) !important;
+  border: 1px solid var(--bs-border-color) !important; /* Solid border all around */
+  color: var(--bs-body-color) !important;
+  margin-bottom: 0.75rem !important; /* Space between items */
+  border-radius: var(--bs-border-radius-lg) !important; /* Rounded corners on all items */
+}
+
+.accordion-item:last-of-type {
+  margin-bottom: 0 !important; /* No margin on last item */
+}
+
+.accordion-button {
+  background-color: var(--bs-tertiary-bg) !important;
+  color: var(--bs-body-color) !important;
+  padding: 0.5rem 1.25rem 0.75rem 1.25rem !important; /* Remove top padding, keep bottom and sides */
+  border-radius: var(--bs-border-radius-lg) !important;
+  font-size: 1rem; /* Normal font size */
+  box-shadow: none !important; /* Remove blue focus outline */
+}
+
+.accordion-button:focus {
+  box-shadow: none !important; /* Remove blue focus outline on focus */
+  outline: none !important;
+}
+
+/* Remove extra spacing from div wrapper inside accordion button */
+.accordion-button > div {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important; /* Tight line height to reduce vertical space */
+}
+
+.accordion-button i {
+  margin-right: 0.5rem; /* Space between icon and text */
+  display: inline-block;
+}
+
+/* When accordion is collapsed, round all corners of button */
+.accordion-button.collapsed {
+  border-radius: var(--bs-border-radius-lg) !important;
+}
+
+/* When accordion is expanded, only round top corners of button */
+.accordion-button:not(.collapsed) {
+  background-color: var(--bs-tertiary-bg) !important;
+  color: var(--bs-body-color) !important;
+  border-radius: var(--bs-border-radius-lg) var(--bs-border-radius-lg) 0 0 !important;
+  box-shadow: none !important;
+}
+
+.accordion-body {
+  background-color: var(--bs-tertiary-bg) !important;
+  color: var(--bs-body-color) !important;
+  border-radius: 0 0 var(--bs-border-radius-lg) var(--bs-border-radius-lg) !important; /* Round bottom corners */
+  padding: 1.25rem !important; /* Reduced padding for more compact look */
+  font-size: 0.95rem; /* Slightly smaller text */
+  line-height: 1.6; /* Better readability */
+}
+
+/* ============================================
+   FORM STYLING
+   ============================================ */
+
+/* Form Controls - input, textarea, select */
+/* Used in: Contact form and other form elements */
+/* Uses CSS variables so it adapts to light/dark mode */
+.form-control,
+.form-select {
+  background-color: var(--bs-tertiary-bg) !important;
+  border-color: var(--bs-border-color) !important;
+  color: var(--bs-body-color) !important;
+  border-radius: var(--bs-border-radius-lg) !important; /* Rounded corners */
+  padding: 0.75rem 1rem !important; /* Generous padding */
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--bs-tertiary-bg) !important;
+  border-color: var(--bs-primary) !important;  /* Orange accent border on focus */
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25) !important;
+  color: var(--bs-body-color) !important;
+}
+
+.form-control::placeholder {
+  color: var(--bs-secondary-color) !important;  /* Purple placeholder text */
+  opacity: 0.6;
+}
+
+/* Form labels */
+.form-label {
+  color: var(--bs-body-color) !important;
+}
+
+/* Form check (checkboxes and radios) */
+.form-check-input {
+  background-color: var(--bs-tertiary-bg) !important;
+  border-color: var(--bs-border-color) !important;
+}
+
+.form-check-input:checked {
+  background-color: var(--bs-primary) !important;  /* Orange when checked */
+  border-color: var(--bs-primary) !important;
+}
+
+.form-check-input:focus {
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25) !important;
+}
+
+.form-check-label {
+  color: var(--bs-body-color) !important;
+}
+
+#spotify-embed {
+  background-color: var(--bs-tertiary-bg) !important;
+  border: 1px solid var(--bs-border-color) !important;
+  border-radius: var(--bs-border-radius-lg) !important; /* Rounded corners */
+  padding: 1.5rem !important; /* Generous padding */
+  margin: 1.5rem !important; /* Generous margin */
+}
+
+/* ============================================
+   CONSISTENT SPACING & ROUNDNESS UTILITIES
+   Apply generous, consistent spacing throughout
+   ============================================ */
+
+/* Standardize all containers */
+.container,
+.container-fluid {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+/* Standardize sections with consistent vertical spacing */
+section {
+  margin-bottom: 2rem;
+}
+
+/* Hero/CTA boxes with background */
+.bg-body-tertiary.rounded {
+  border-radius: var(--bs-border-radius-lg) !important;
+  padding: 2rem !important;
+  margin: 2rem !important;
+}
+
+/* Video container roundness */
+.bg-light-subtle {
+  border-radius: var(--bs-border-radius-lg) !important;
+  padding: 1.5rem !important;
+}
+
+/* Font Awesome icons - use body text color */
+.fa-solid,
+.fa-brands,
+.fa-regular,
+[class^="fa-"],
+[class*=" fa-"] {
+  color: var(--bs-body-color) !important;
+}
+
+/* Icon links should also use body color and remove default link styling */
+a.fa-solid,
+a.fa-brands,
+a.fa-regular,
+a[class^="fa-"],
+a[class*=" fa-"] {
+  color: var(--bs-body-color) !important;
+  text-decoration: none !important;
+}
+
+/* Navbar brand brain icon - use primary color in dark mode only */
+[data-bs-theme="dark"] .navbar-brand .fa-brain {
+  color: var(--bs-primary) !important;
+}
+
+/* Hover state for icon links */
+a.fa-solid:hover,
+a.fa-brands:hover,
+a.fa-regular:hover,
+a[class^="fa-"]:hover,
+a[class*=" fa-"]:hover {
+  color: var(--bs-primary) !important;
+  opacity: 0.8;
+}
+
+/* Icon containers in cards */
+.card .text-center:first-child {
+  padding: 1.5rem !important;
+}
+
+/* Card images with padding (for logos, etc) */
+.card-img-top.px-3 {
+  padding: 1.5rem !important;
+}
+
+/* Headings in sections */
+section h1, section h2 {
+  margin-bottom: 1rem;
+}
+
+section h2 {
+  padding-top: 0.5rem;
+}
+
+/* Content text in sections */
+section > .text-center p,
+section > .container > .text-center p {
+  margin-bottom: 1rem;
+}
+
+/* List group items */
+.list-group-item {
+  border: 1px solid var(--bs-border-color) !important; /* Solid border all around */
+  border-radius: var(--bs-border-radius-lg) !important;
+  margin-bottom: 0.75rem !important;
+  padding: 1rem 1.25rem !important;
+}
+
+.list-group-item:last-child {
+  margin-bottom: 0 !important; /* No margin on last item */
+}
+
+.list-group {
+  gap: 0; /* Remove gap - using margin-bottom instead */
+}
+
+/* Footer consistent roundness and spacing */
+footer .container-fluid.bg-body-tertiary {
+  border-top-left-radius: var(--bs-border-radius-lg) !important;
+  border-top-right-radius: var(--bs-border-radius-lg) !important;
+  padding-top: 2rem !important;
+  margin-top: 2rem !important;
+}
+
+/* Generic footer buttons section */
+section .container.text-center:has(.btn) {
+  padding: 2rem 1rem !important;
+}
+
+/* ============================================
+   RETRO THEME CHART COLORS
+   From: https://brandguides.brandfolder.com/beautiful-dashboards/themes#retro
+   Used by Chart.js in charts.js
+   ============================================ */
+
+:root {
+  /* Define chart color CSS variables */
+  --chart-color-1: #223459;  /* Navy blue - Chart 1 */
+  --chart-color-2: #6A5AAA;  /* Purple - Chart 2 */
+  --chart-color-3: #B45082;  /* Pink/Mauve - Chart 3 */
+  --chart-color-4: #F9767F;  /* Coral/Salmon - Chart 4 */
+  --chart-color-5: #FFB142;  /* Orange - Chart 5 */
+  --chart-color-6: #FFDE70;  /* Yellow - Chart 6 */
+  --chart-semantic-positive: #37CD97;  /* Green - Success/Positive */
+  --chart-semantic-negative: #F84444;  /* Red - Error/Negative */
+}
+
+/* ============================================
+   CUSTOM GRADIENT BACKGROUNDS
+   ============================================ */
+
+/* Solid background using body color */
+/* Used in: body.bg-gradient (all HTML pages) */
+.bg-gradient {
+  background: var(--bs-body-bg) !important;
+}

@@ -4,6 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ADHD Hacks</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/favicon/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
     <!-- Inline script to prevent flash of light mode -->
     <script>
       (function () {
@@ -17,13 +41,18 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
-  <body class="d-flex flex-column min-vh-100">
+  <body class="d-flex flex-column min-vh-100 bg-gradient">
     <header>
-      <nav class="navbar navbar-expand-sm bg-body-tertiary" id="navbar">
+      <nav class="navbar navbar-expand-sm bg-transparent" id="navbar">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <a
+            class="navbar-brand"
+            href="index.html"
+            aria-label="ADHD Hacks Home"
+          >
             <i class="fa-solid fa-brain display-6"></i>
           </a>
           <!--This button appears when screen size is less than 576px-->
@@ -47,12 +76,17 @@
               <!-- Darkmode toggle -->
 
               <div class="form-check form-switch mt-2" id="dark">
-                <i class="fa-solid fa-moon me-2" id="dark-mode-icon"></i>
+                <i
+                  class="fa-solid fa-moon me-2"
+                  id="dark-mode-icon"
+                  aria-hidden="true"
+                ></i>
                 <input
                   class="form-check-input"
                   type="checkbox"
                   role="switch"
                   id="themeSwitch"
+                  aria-label="Toggle dark mode"
                 />
               </div>
               <li class="nav-item">
@@ -74,9 +108,9 @@
     </header>
 
     <main class="flex-fill">
-      <!-- Cards section -->
-      <section>
-        <div class="container text-center">
+      <!-- Top section -->
+      <section class="container">
+        <div class="text-center">
           <h2>Get Diagnosed</h2>
           <div class="row justify-content-center">
             <div class="col-sm-12 col-md-6 col-lg-6">
@@ -90,10 +124,14 @@
           <div class="row text-center pb-3 g-3">
             <div class="col-12 col-md-6">
               <div class="card h-100 d-flex flex-column">
-                <a href="https://adhduk.co.uk/right-to-choose/">
+                <a
+                  href="https://adhduk.co.uk/right-to-choose/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src="assets/images/NHS-Right-To-Choose.png"
-                    class="card-img-top px-3 pt-2"
+                    class="card-img-top px-3 pt-2 img-bg-white-dark"
                     alt="NHS Right to Choose logo"
                   />
                 </a>
@@ -106,7 +144,9 @@
                   <div class="mt-auto p-3">
                     <a
                       href="https://adhduk.co.uk/right-to-choose/"
-                      class="btn btn-primary"
+                      class="btn btn-secondary"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       >Visit NHS Right to Choose</a
                     >
                   </div>
@@ -115,10 +155,14 @@
             </div>
             <div class="col-12 col-md-6">
               <div class="card h-100 d-flex flex-column">
-                <a href="https://www.problemshared.net/">
+                <a
+                  href="https://www.problemshared.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src="assets/images/problem-shared.png"
-                    class="card-img-top px-3 pt-2"
+                    class="card-img-top px-3 pt-2 img-bg-white-dark"
                     alt="Problem Shared logo"
                   />
                 </a>
@@ -133,6 +177,8 @@
                     <a
                       href="https://www.problemshared.net/"
                       class="btn btn-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       >Visit Problem Shared</a
                     >
                   </div>
@@ -140,20 +186,32 @@
               </div>
             </div>
           </div>
+          <h2>ADHD Stats</h2>
           <div class="col-12 p-2">
-            <h2>ADHD Stats</h2>
             <div
-              class="row pt-3 border border-1 rounded justify-content-center align-items-center"
+              class="row pt-3 card-style justify-content-center align-items-center"
             >
               <div class="col-12 col-md-6 col-lg-8 p-3">
-                <p class="card-text text-start p-3">
-                  Research shows that ADHD continues into adulthood for many
-                  people. A global study found that around 2.6% of adults have
-                  ongoing ADHD from childhood, while about 6.8% of adults show
-                  ADHD symptoms even if they weren't diagnosed as children. That
-                  equals roughly 140 to 366 million adults worldwide in 2020.
-                  The number of people with ADHD tends to go down with age.
-                </p>
+                <div class="card-text text-start p-3">
+                  <p>
+                    Research shows that ADHD continues into adulthood for many
+                    people. A global study found that around 2.6% of adults have
+                    ongoing ADHD from childhood, while about 6.8% of adults show
+                    ADHD symptoms even if they weren't diagnosed as children.
+                    That equals roughly 140 to 366 million adults worldwide in
+                    2020. The number of people with ADHD tends to go down with
+                    age.
+                  </p>
+                  <p>
+                    <strong>Source:</strong>
+                    <a
+                      href="https://jogh.org/documents/2021/jogh-11-04009.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Journal of Global Health - Adult ADHD Study</a
+                    >
+                  </p>
+                </div>
               </div>
               <div
                 class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-0 d-flex justify-content-center justify-content-lg-end"
@@ -167,15 +225,28 @@
                   <div style="position: relative; height: 300px">
                     <canvas id="adhdBarChart"></canvas>
                   </div>
-                  <p class="p-3">
-                    In England, ADHD is more common among people who are
-                    unemployed or receiving out-of-work benefits, and strongly
-                    linked to substance misuse and social disadvantage. Around
-                    12% of people in treatment for substance use disorders and
-                    31% of ex-prisoners have ADHD, compared to roughly 6–7% in
-                    the general adult population. These figures show that ADHD
-                    is far more prevalent in vulnerable and marginalised groups.
-                  </p>
+                  <div class="card-text text-start p-3">
+                    <p>
+                      In England, ADHD is more common among people who are
+                      unemployed or receiving out-of-work benefits, and strongly
+                      linked to substance misuse and social disadvantage. Around
+                      12% of people in treatment for substance use disorders and
+                      31% of ex-prisoners have ADHD, compared to roughly 6–7% in
+                      the general adult population. These figures show that ADHD
+                      is far more prevalent in vulnerable and marginalised
+                      groups.
+                    </p>
+                    <p>
+                      <strong>Source:</strong>
+                      <a
+                        href="https://digital.nhs.uk/data-and-information/publications/statistical/adult-psychiatric-morbidity-survey/survey-of-mental-health-and-wellbeing-england-2023-24/attention-deficit-hyperactivity-disorder"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        NHS Digital - Adult Psychiatric Morbidity Survey
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -186,7 +257,7 @@
 
       <!-- Generic footer buttons -->
       <section>
-        <div class="container text-center p-3">
+        <div class="container text-center">
           <div class="row text-center">
             <div class="col-12">
               <a href="index.html" class="btn btn-secondary">Back to Home</a>
@@ -198,7 +269,7 @@
     </main>
 
     <footer>
-      <div class="container-fluid bg-body-tertiary text-center pt-3 mt-4">
+      <div class="container-fluid bg-body-tertiary text-center">
         <i class="fa-solid fa-brain h2"></i>
         <h2>ADHD Hacks</h2>
         <br />
@@ -207,24 +278,36 @@
             href="https://www.instagram.com/"
             class="fa-brands fa-instagram h4"
             style="text-decoration: none"
+            aria-label="Visit our Instagram page"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
           <a
             href="https://www.youtube.com/"
             class="fa-brands fa-youtube h4"
             style="text-decoration: none"
+            aria-label="Visit our YouTube channel"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
           <a
             href="https://www.linkedin.com/"
             class="fa-brands fa-linkedin h4"
             style="text-decoration: none"
+            aria-label="Visit our LinkedIn page"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
         </div>
 
-        <p class="mb-0">&copy; 2024 ADHD Hacks. All rights reserved.</p>
+        <p class="mb-0">&copy; 2025 ADHD Hacks. All rights reserved.</p>
         <a
           href="https://github.com/RealTimeBasecamp/code-institute-adhd-hacks"
           class="fa-brands fa-github text-black"
           style="text-decoration: none"
+          aria-label="View source code on GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
         ></a>
       </div>
     </footer>
@@ -236,89 +319,7 @@
     ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script>
-      const ctx = document.getElementById("adhdPieChart");
-
-      new Chart(ctx, {
-        type: "doughnut",
-        data: {
-          labels: [
-            "Persistent ADHD (2.6%)",
-            "Symptomatic ADHD (6.8%)",
-            "No ADHD (90.6%)",
-          ],
-          datasets: [
-            {
-              label: "Adult ADHD Distribution",
-              data: [2.6, 6.8, 90.6],
-              backgroundColor: [
-                "rgb(255, 99, 132)",
-                "rgb(54, 162, 235)",
-                "rgb(255, 205, 86)",
-              ],
-              hoverOffset: 4,
-            },
-          ],
-        },
-      });
-    </script>
-
-    <script>
-      const ctxBar = document.getElementById("adhdBarChart");
-
-      new Chart(ctxBar, {
-        type: "bar",
-        data: {
-          labels: [
-            "General Population",
-            "Substance Use Treatment",
-            "Ex-Prisoners",
-          ],
-          datasets: [
-            {
-              label: "ADHD Prevalence (%)",
-              data: [6.5, 12, 31],
-              backgroundColor: [
-                "rgba(54, 162, 235, 0.8)",
-                "rgba(255, 206, 86, 0.8)",
-                "rgba(255, 99, 132, 0.8)",
-              ],
-              borderColor: [
-                "rgb(54, 162, 235)",
-                "rgb(255, 206, 86)",
-                "rgb(255, 99, 132)",
-              ],
-              borderWidth: 2,
-            },
-          ],
-        },
-        options: {
-          indexAxis: "y",
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              beginAtZero: true,
-              max: 35,
-              title: {
-                display: true,
-                text: "Percentage (%)",
-              },
-            },
-          },
-          plugins: {
-            legend: {
-              display: false,
-            },
-            title: {
-              display: true,
-              text: "ADHD Prevalence in Different Populations (England)",
-            },
-          },
-        },
-      });
-    </script>
+    <script src="assets/js/charts.js"></script>
 
     <!-- 3x radio button wuth text -->
     <script>

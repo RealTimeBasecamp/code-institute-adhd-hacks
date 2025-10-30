@@ -4,6 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ADHD Hacks</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/favicon/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
     <!-- Inline script to prevent flash of light mode -->
     <script>
       (function () {
@@ -17,12 +41,17 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body class="d-flex flex-column min-vh-100">
+  <body class="d-flex flex-column min-vh-100 bg-gradient">
     <header>
-      <nav class="navbar navbar-expand-sm bg-body-tertiary">
+      <nav class="navbar navbar-expand-sm bg-transparent" id="navbar">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <a
+            class="navbar-brand"
+            href="index.html"
+            aria-label="ADHD Hacks Home"
+          >
             <i class="fa-solid fa-brain display-6"></i>
           </a>
           <!--This button appears when screen size is less than 576px-->
@@ -46,12 +75,17 @@
               <!-- Darkmode toggle -->
 
               <div class="form-check form-switch mt-2" id="dark">
-                <i class="fa-solid fa-moon me-2" id="dark-mode-icon"></i>
+                <i
+                  class="fa-solid fa-moon me-2"
+                  id="dark-mode-icon"
+                  aria-hidden="true"
+                ></i>
                 <input
                   class="form-check-input"
                   type="checkbox"
                   role="switch"
                   id="themeSwitch"
+                  aria-label="Toggle dark mode"
                 />
               </div>
               <li class="nav-item">
@@ -73,16 +107,18 @@
     </header>
 
     <main class="flex-fill">
-      <section>
-        <div class="container col-12 text-center p-3">
+      <section class="container">
+        <div class="text-center">
           <h1>Contact Us</h1>
           <form action="contact-success.html">
             <div class="row-cols-1 text-start">
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Subject</label
+                <label for="subjectSelect" class="form-label">Subject</label>
+                <select
+                  class="form-select"
+                  id="subjectSelect"
+                  aria-label="Select subject"
                 >
-                <select class="form-select" aria-label="Default select example">
                   <option selected>Submit ADHD Hack</option>
                   <option value="1">General enquiry</option>
                   <option value="2">Feedback</option>
@@ -132,7 +168,7 @@
       </section>
     </main>
     <footer>
-      <div class="container-fluid bg-body-tertiary text-center pt-3 mt-4">
+      <div class="container-fluid bg-body-tertiary text-center">
         <i class="fa-solid fa-brain h2"></i>
         <h2>ADHD Hacks</h2>
         <br />
@@ -141,23 +177,35 @@
             href="https://www.instagram.com/"
             class="fa-brands fa-instagram h4"
             style="text-decoration: none"
+            aria-label="Visit our Instagram page"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
           <a
             href="https://www.youtube.com/"
             class="fa-brands fa-youtube h4"
             style="text-decoration: none"
+            aria-label="Visit our YouTube channel"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
           <a
             href="https://www.linkedin.com/"
             class="fa-brands fa-linkedin h4"
             style="text-decoration: none"
+            aria-label="Visit our LinkedIn page"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
         </div>
 
-        <p class="mb-0">&copy; 2024 ADHD Hacks. All rights reserved.</p>
+        <p class="mb-0">&copy; 2025 ADHD Hacks. All rights reserved.</p>
         <a
           href="https://github.com/RealTimeBasecamp/code-institute-adhd-hacks"
           class="fa-brands fa-github text-black"
+          aria-label="View source code on GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
         ></a>
       </div>
     </footer>
