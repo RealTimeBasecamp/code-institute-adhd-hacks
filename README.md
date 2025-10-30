@@ -66,6 +66,7 @@ Detailed wireframes were used instead of user stories due to the 3-day project t
 
 ## Validation
 Chrome dev tools was used to generate the lighthouse results. Performance is impacted by the YouTube video and external charts.
+
 ![Lighthouse results](/assets/images/lighthouse-results.PNG "Lighthouse performance results")
 
 Responsive design across screen sizes:
