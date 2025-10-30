@@ -203,6 +203,7 @@
 .card-body {
   background-color: var(--bs-tertiary-bg) !important;
   color: var(--bs-body-color) !important;
+  padding: 1.5rem !important; /* Generous padding for all cards */
 }
 
 .card-title {
@@ -231,27 +232,68 @@
   --bs-accordion-btn-color: var(--bs-body-color) !important;
   --bs-accordion-active-bg: var(--bs-tertiary-bg) !important;
   --bs-accordion-active-color: var(--bs-body-color) !important;
+  --bs-accordion-border-radius: var(--bs-border-radius-lg) !important; /* Rounded corners */
+  max-width: 800px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the accordion */
 }
 
 .accordion-item {
   background-color: var(--bs-tertiary-bg) !important;
-  border-color: var(--bs-border-color) !important;
+  border: 1px solid var(--bs-border-color) !important; /* Solid border all around */
   color: var(--bs-body-color) !important;
+  margin-bottom: 0.75rem !important; /* Space between items */
+  border-radius: var(--bs-border-radius-lg) !important; /* Rounded corners on all items */
+}
+
+.accordion-item:first-of-type {
+  border-top-left-radius: var(--bs-border-radius-lg) !important;
+  border-top-right-radius: var(--bs-border-radius-lg) !important;
+}
+
+.accordion-item:last-of-type {
+  border-bottom-left-radius: var(--bs-border-radius-lg) !important;
+  border-bottom-right-radius: var(--bs-border-radius-lg) !important;
+  margin-bottom: 0 !important; /* No margin on last item */
 }
 
 .accordion-button {
   background-color: var(--bs-tertiary-bg) !important;
   color: var(--bs-body-color) !important;
+  padding: 0.75rem 1.25rem !important; /* Compact padding */
+  border-radius: var(--bs-border-radius-lg) !important;
+  font-size: 1rem; /* Normal font size */
+  box-shadow: none !important; /* Remove blue focus outline */
+}
+
+.accordion-button:focus {
+  box-shadow: none !important; /* Remove blue focus outline on focus */
+  outline: none !important;
+}
+
+/* Remove extra spacing from div wrapper inside accordion button */
+.accordion-button > div {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important; /* Tight line height to reduce vertical space */
+}
+
+.accordion-button i {
+  margin-right: 0.5rem; /* Space between icon and text */
+  display: inline-block;
 }
 
 .accordion-button:not(.collapsed) {
   background-color: var(--bs-tertiary-bg) !important;
   color: var(--bs-body-color) !important;
+  box-shadow: none !important; /* Remove blue focus outline when open */
 }
 
 .accordion-body {
   background-color: var(--bs-tertiary-bg) !important;
   color: var(--bs-body-color) !important;
+  padding: 1.25rem !important; /* Reduced padding for more compact look */
+  font-size: 0.95rem; /* Slightly smaller text */
+  line-height: 1.6; /* Better readability */
 }
 
 /* ============================================
@@ -266,6 +308,8 @@
   background-color: var(--bs-tertiary-bg) !important;
   border-color: var(--bs-border-color) !important;
   color: var(--bs-body-color) !important;
+  border-radius: var(--bs-border-radius-lg) !important; /* Rounded corners */
+  padding: 0.75rem 1rem !important; /* Generous padding */
 }
 
 .form-control:focus,
@@ -309,6 +353,93 @@
 #spotify-embed {
   background-color: var(--bs-tertiary-bg) !important;
   border: 1px solid var(--bs-border-color) !important;
+  border-radius: var(--bs-border-radius-lg) !important; /* Rounded corners */
+  padding: 1.5rem !important; /* Generous padding */
+  margin: 1.5rem !important; /* Generous margin */
+}
+
+/* ============================================
+   CONSISTENT SPACING & ROUNDNESS UTILITIES
+   Apply generous, consistent spacing throughout
+   ============================================ */
+
+/* Standardize all containers */
+.container,
+.container-fluid {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+/* Standardize sections with consistent vertical spacing */
+section {
+  margin-bottom: 2rem;
+}
+
+/* Hero/CTA boxes with background */
+.bg-body-tertiary.rounded {
+  border-radius: var(--bs-border-radius-lg) !important;
+  padding: 2rem !important;
+  margin: 2rem !important;
+}
+
+/* Video container roundness */
+.bg-light-subtle {
+  border-radius: var(--bs-border-radius-lg) !important;
+  padding: 1.5rem !important;
+}
+
+/* Icon containers in cards */
+.card .text-center:first-child {
+  padding: 1.5rem !important;
+}
+
+/* Card images with padding (for logos, etc) */
+.card-img-top.px-3 {
+  padding: 1.5rem !important;
+}
+
+/* Headings in sections */
+section h1, section h2 {
+  margin-bottom: 1rem;
+}
+
+section h2 {
+  padding-top: 0.5rem;
+}
+
+/* Content text in sections */
+section > .text-center p,
+section > .container > .text-center p {
+  margin-bottom: 1rem;
+}
+
+/* List group items */
+.list-group-item {
+  border: 1px solid var(--bs-border-color) !important; /* Solid border all around */
+  border-radius: var(--bs-border-radius-lg) !important;
+  margin-bottom: 0.75rem !important;
+  padding: 1rem 1.25rem !important;
+}
+
+.list-group-item:last-child {
+  margin-bottom: 0 !important; /* No margin on last item */
+}
+
+.list-group {
+  gap: 0; /* Remove gap - using margin-bottom instead */
+}
+
+/* Footer consistent roundness and spacing */
+footer .container-fluid.bg-body-tertiary {
+  border-top-left-radius: var(--bs-border-radius-lg) !important;
+  border-top-right-radius: var(--bs-border-radius-lg) !important;
+  padding-top: 2rem !important;
+  margin-top: 2rem !important;
+}
+
+/* Generic footer buttons section */
+section .container.text-center:has(.btn) {
+  padding: 2rem 1rem !important;
 }
 
 /* ============================================
