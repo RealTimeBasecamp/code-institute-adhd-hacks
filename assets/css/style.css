@@ -45,86 +45,102 @@
   --bs-card-bg: #F2F1ED !important;           /* Warm beige card/widget background */
   --bs-border-color: #ddd9cf !important;      /* Soft warm border tone */
   --bs-border-color-translucent: rgba(255, 177, 66, 0.15) !important;  /* Orange-tinted translucent */
+  
+  /* ===== BUTTON TEXT COLORS ===== */
+  /* Light mode: Dark text works well on both orange and purple */
+  --bs-btn-primary-color: #000000 !important;    /* Dark navy text on orange primary buttons */
+  --bs-btn-secondary-color: #ffffff !important;  /* Dark navy text on purple secondary buttons */
 }
 
-/* Dark mode */
+/* Dark mode - Based on Retro theme with adjusted contrast */
 [data-bs-theme="dark"] {
   /* ===== PRIMARY COLOR ===== */
   /* Used in: .btn-primary, .btn-outline-primary, links */
-  /* Soft pastel lavender for dark mode - still gentle but visible */
-  --bs-primary: #d4bcf7 !important;           /* Soft pastel lavender, brighter for dark backgrounds */
-  --bs-primary-rgb: 212, 188, 247 !important;  /* Same color as RGB for hover/transparency effects */
+  /* Lighter, more saturated orange for visibility on dark backgrounds */
+  --bs-primary: #FFC870 !important;           /* Lighter warm orange (brighter than light mode #FFB142) */
+  --bs-primary-rgb: 255, 200, 112 !important;
   
   /* ===== SECONDARY COLOR ===== */
   /* Used in: .btn-secondary (footer "Back to Home" buttons) */
-  /* Soft pastel blue for dark mode */
-  --bs-secondary: #8fc5f5 !important;         /* Soft pastel blue, visible on dark */
-  --bs-secondary-rgb: 143, 197, 245 !important;  /* Same color as RGB for hover/transparency effects */
+  /* Lighter purple with increased saturation for dark mode */
+  --bs-secondary: #8B7BC8 !important;         /* Lighter purple (brighter than light mode #6A5AAA) */
+  --bs-secondary-rgb: 139, 123, 200 !important;
   
   /* ===== BODY COLORS ===== */
   /* Base background and text colors for entire site in dark mode */
-  --bs-body-bg: #1f1f2e !important;           /* Soft dark purple-blue, not pure black */
-  --bs-body-color: #e8e3f5 !important;        /* Soft off-white with lavender tint for contrast */
-  --bs-body-bg-rgb: 31, 31, 46 !important;
-  --bs-body-color-rgb: 232, 227, 245 !important;
+  --bs-body-bg: #1a1d2e !important;           /* Dark navy background (inverted from light mode navy text #223459) */
+  --bs-body-color: #E9E7E1 !important;        /* Light text (same as light mode background for consistency) */
+  --bs-body-bg-rgb: 26, 29, 46 !important;
+  --bs-body-color-rgb: 233, 231, 225 !important;
+  
+  /* ===== SECONDARY TEXT COLOR ===== */
+  /* Used for less prominent text, captions, labels */
+  --bs-secondary-color: #A394D4 !important;   /* Lighter purple for secondary text */
+  --bs-secondary-color-rgb: 163, 148, 212 !important;
   
   /* ===== TERTIARY BACKGROUND ===== */
-  /* Used in: bg-body-tertiary (footer, list-group-items) - darker in dark mode */
-  --bs-tertiary-bg: #2a2a3e !important;       /* Soft dark purple-blue, slightly lighter than body */
-  --bs-tertiary-bg-rgb: 42, 42, 62 !important;
+  /* Used in: bg-body-tertiary (footer, list-group-items) - slightly lighter than body */
+  --bs-tertiary-bg: #252939 !important;       /* Slightly lighter navy than body background */
+  --bs-tertiary-bg-rgb: 37, 41, 57 !important;
   
   /* ===== LIGHT SUBTLE ===== */
-  /* Used in: bg-light-subtle (video container) - darker in dark mode */
-  --bs-light-bg-subtle: #2e2e45 !important;   /* Soft dark blue-purple container */
+  /* Used in: bg-light-subtle (video container) */
+  --bs-light-bg-subtle: #2a2f42 !important;   /* Medium navy for containers */
   
   /* ===== DARK COLOR ===== */
-  /* Used in: .btn-dark (carousel navigation buttons in resources.html) - lighter in dark mode */
-  --bs-dark: #ddd8eb !important;              /* Soft pastel lavender-gray for visibility */
-  --bs-dark-rgb: 221, 216, 235 !important;
+  /* Used in: .btn-dark (carousel navigation buttons in resources.html) */
+  --bs-dark: #3d4254 !important;              /* Medium-dark navy-gray */
+  --bs-dark-rgb: 61, 66, 84 !important;
   
   /* ===== CARD & BORDER ===== */
-  /* Used in: .card components and border utilities - adapted for dark mode */
-  --bs-card-bg: #2a2a3e !important;           /* Soft dark purple-blue card background */
-  --bs-border-color: #454560 !important;      /* Muted purple-gray borders, soft but visible */
-  --bs-border-color-translucent: rgba(212, 188, 247, 0.15) !important;  /* Soft lavender translucent */
+  /* Used in: .card components and border utilities */
+  --bs-card-bg: #252939 !important;           /* Cards slightly lighter than body (matching tertiary-bg) */
+  --bs-border-color: #3d4254 !important;      /* Subtle navy-gray borders */
+  --bs-border-color-translucent: rgba(255, 200, 112, 0.15) !important;  /* Orange-tinted translucent */
+  
+  /* ===== BUTTON TEXT COLORS ===== */
+  /* Dark mode: Swapped for better contrast - light text on both buttons */
+  --bs-btn-primary-color: #000000 !important;    /* Light text on orange primary buttons */
+  --bs-btn-secondary-color: #ffffff !important;  /* Light text on purple secondary buttons */
 }
 
 /* ============================================
    BUTTON STYLING - All States
+   Uses CSS variables to automatically adapt to light/dark mode
    ============================================ */
 
 /* Primary Button - .btn-primary */
 /* Used in: Most action buttons (Submit, Get Help, Explore Resources, etc.) */
 .btn-primary {
-  --bs-btn-color: #223459 !important;              /* Dark navy text on orange background for contrast */
+  --bs-btn-color: var(--bs-btn-primary-color) !important;
   --bs-btn-bg: var(--bs-primary) !important;
   --bs-btn-border-color: var(--bs-primary) !important;
-  --bs-btn-hover-color: #223459 !important;
-  --bs-btn-hover-bg: #e69933 !important;           /* Darker warm orange on hover */
-  --bs-btn-hover-border-color: #d98c2b !important; /* Darker orange border on hover */
-  --bs-btn-active-color: #223459 !important;
-  --bs-btn-active-bg: #d98c2b !important;          /* Even darker orange when clicked */
-  --bs-btn-active-border-color: #cc8024 !important;
-  --bs-btn-disabled-color: #223459 !important;
-  --bs-btn-disabled-bg: var(--bs-primary) !important;
-  --bs-btn-disabled-border-color: var(--bs-primary) !important;
+  --bs-btn-hover-color: var(--bs-btn-primary-color) !important;
+  --bs-btn-hover-bg: rgba(var(--bs-primary-rgb), 0.85) !important;
+  --bs-btn-hover-border-color: rgba(var(--bs-primary-rgb), 0.85) !important;
+  --bs-btn-active-color: var(--bs-btn-primary-color) !important;
+  --bs-btn-active-bg: rgba(var(--bs-primary-rgb), 0.75) !important;
+  --bs-btn-active-border-color: rgba(var(--bs-primary-rgb), 0.75) !important;
+  --bs-btn-disabled-color: var(--bs-btn-primary-color) !important;
+  --bs-btn-disabled-bg: rgba(var(--bs-primary-rgb), 0.5) !important;
+  --bs-btn-disabled-border-color: rgba(var(--bs-primary-rgb), 0.5) !important;
 }
 
 /* Secondary Button - .btn-secondary */
 /* Used in: "Back to Home" footer buttons */
 .btn-secondary {
-  --bs-btn-color: #fff !important;
+  --bs-btn-color: var(--bs-btn-secondary-color) !important;
   --bs-btn-bg: var(--bs-secondary) !important;
   --bs-btn-border-color: var(--bs-secondary) !important;
-  --bs-btn-hover-color: #fff !important;
-  --bs-btn-hover-bg: #584a91 !important;           /* Darker retro purple on hover */
-  --bs-btn-hover-border-color: #4d3f7d !important; /* Darker purple border on hover */
-  --bs-btn-active-color: #fff !important;
-  --bs-btn-active-bg: #4d3f7d !important;          /* Even darker purple when clicked */
-  --bs-btn-active-border-color: #433569 !important;
-  --bs-btn-disabled-color: #fff !important;
-  --bs-btn-disabled-bg: var(--bs-secondary) !important;
-  --bs-btn-disabled-border-color: var(--bs-secondary) !important;
+  --bs-btn-hover-color: var(--bs-btn-secondary-color) !important;
+  --bs-btn-hover-bg: rgba(var(--bs-secondary-rgb), 0.85) !important;
+  --bs-btn-hover-border-color: rgba(var(--bs-secondary-rgb), 0.85) !important;
+  --bs-btn-active-color: var(--bs-btn-secondary-color) !important;
+  --bs-btn-active-bg: rgba(var(--bs-secondary-rgb), 0.75) !important;
+  --bs-btn-active-border-color: rgba(var(--bs-secondary-rgb), 0.75) !important;
+  --bs-btn-disabled-color: var(--bs-btn-secondary-color) !important;
+  --bs-btn-disabled-bg: rgba(var(--bs-secondary-rgb), 0.5) !important;
+  --bs-btn-disabled-border-color: rgba(var(--bs-secondary-rgb), 0.5) !important;
 }
 
 /* Outline Primary Button - .btn-outline-primary */
@@ -146,18 +162,18 @@
 /* Dark Button - .btn-dark */
 /* Used in: Carousel navigation buttons (resources.html) */
 .btn-dark {
-  --bs-btn-color: #fff !important;
-  --bs-btn-bg: #212529 !important;
-  --bs-btn-border-color: #212529 !important;
-  --bs-btn-hover-color: #fff !important;
-  --bs-btn-hover-bg: #424649 !important;           /* Lighter on hover */
-  --bs-btn-hover-border-color: #373b3e !important;
-  --bs-btn-active-color: #fff !important;
-  --bs-btn-active-bg: #4d5154 !important;
-  --bs-btn-active-border-color: #373b3e !important;
-  --bs-btn-disabled-color: #fff !important;
-  --bs-btn-disabled-bg: #212529 !important;
-  --bs-btn-disabled-border-color: #212529 !important;
+  --bs-btn-color: var(--bs-body-bg) !important;
+  --bs-btn-bg: var(--bs-dark) !important;
+  --bs-btn-border-color: var(--bs-dark) !important;
+  --bs-btn-hover-color: var(--bs-body-bg) !important;
+  --bs-btn-hover-bg: rgba(var(--bs-dark-rgb), 1.2) !important;
+  --bs-btn-hover-border-color: rgba(var(--bs-dark-rgb), 1.2) !important;
+  --bs-btn-active-color: var(--bs-body-bg) !important;
+  --bs-btn-active-bg: rgba(var(--bs-dark-rgb), 1.4) !important;
+  --bs-btn-active-border-color: rgba(var(--bs-dark-rgb), 1.4) !important;
+  --bs-btn-disabled-color: var(--bs-body-bg) !important;
+  --bs-btn-disabled-bg: rgba(var(--bs-dark-rgb), 0.5) !important;
+  --bs-btn-disabled-border-color: rgba(var(--bs-dark-rgb), 0.5) !important;
 }
 
 /* ============================================
@@ -166,48 +182,65 @@
 
 /* Cards - .card */
 /* Used in: All card components throughout the site */
-/* FIXED: Cards now use F2F1ED (warm beige) instead of body background */
+/* Uses CSS variables so it adapts to light/dark mode */
 .card {
-  --bs-card-bg: #F2F1ED !important;
-  --bs-card-border-color: var(--bs-border-color-translucent) !important;
+  background-color: var(--bs-tertiary-bg) !important;
+  border-color: var(--bs-border-color) !important;
+  color: var(--bs-body-color) !important;
+}
+
+.card-body {
+  background-color: var(--bs-tertiary-bg) !important;
+  color: var(--bs-body-color) !important;
+}
+
+.card-title {
+  color: var(--bs-body-color) !important;
+}
+
+.card-text {
+  color: var(--bs-body-color) !important;
 }
 
 /* List Group Items - .list-group-item */
 /* Used in: ADHD traits checklist items */
 .list-group-item {
-  --bs-list-group-bg: #F2F1ED !important;
+  --bs-list-group-bg: var(--bs-tertiary-bg) !important;
   --bs-list-group-border-color: var(--bs-border-color) !important;
+  --bs-list-group-color: var(--bs-body-color) !important;
 }
 
 /* Accordion - .accordion */
 /* Used in: Accordion components */
-/* FIXED: Accordions now use F2F1ED (warm beige) tile color */
+/* Uses CSS variables so it adapts to light/dark mode */
 .accordion {
-  --bs-accordion-bg: #F2F1ED !important;
+  --bs-accordion-bg: var(--bs-tertiary-bg) !important;
   --bs-accordion-border-color: var(--bs-border-color) !important;
-  --bs-accordion-btn-bg: #F2F1ED !important;
-  --bs-accordion-btn-color: #223459 !important;
-  --bs-accordion-active-bg: #F2F1ED !important;
-  --bs-accordion-active-color: #223459 !important;
+  --bs-accordion-btn-bg: var(--bs-tertiary-bg) !important;
+  --bs-accordion-btn-color: var(--bs-body-color) !important;
+  --bs-accordion-active-bg: var(--bs-tertiary-bg) !important;
+  --bs-accordion-active-color: var(--bs-body-color) !important;
 }
 
 .accordion-item {
-  background-color: #F2F1ED !important;
+  background-color: var(--bs-tertiary-bg) !important;
   border-color: var(--bs-border-color) !important;
+  color: var(--bs-body-color) !important;
 }
 
 .accordion-button {
-  background-color: #F2F1ED !important;
-  color: #223459 !important;
+  background-color: var(--bs-tertiary-bg) !important;
+  color: var(--bs-body-color) !important;
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #F2F1ED !important;
-  color: #223459 !important;
+  background-color: var(--bs-tertiary-bg) !important;
+  color: var(--bs-body-color) !important;
 }
 
 .accordion-body {
-  background-color: #F2F1ED !important;
+  background-color: var(--bs-tertiary-bg) !important;
+  color: var(--bs-body-color) !important;
 }
 
 /* ============================================
@@ -216,59 +249,60 @@
 
 /* Form Controls - input, textarea, select */
 /* Used in: Contact form and other form elements */
-/* FIXED: Forms now use F2F1ED (warm beige) tile color */
+/* Uses CSS variables so it adapts to light/dark mode */
 .form-control,
 .form-select {
-  background-color: #F2F1ED !important;
+  background-color: var(--bs-tertiary-bg) !important;
   border-color: var(--bs-border-color) !important;
-  color: #223459 !important;
+  color: var(--bs-body-color) !important;
 }
 
 .form-control:focus,
 .form-select:focus {
-  background-color: #F2F1ED !important;
-  border-color: #FFB142 !important;  /* Orange accent border on focus */
-  box-shadow: 0 0 0 0.25rem rgba(255, 177, 66, 0.25) !important;
-  color: #223459 !important;
+  background-color: var(--bs-tertiary-bg) !important;
+  border-color: var(--bs-primary) !important;  /* Orange accent border on focus */
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25) !important;
+  color: var(--bs-body-color) !important;
 }
 
 .form-control::placeholder {
-  color: #6A5AAA !important;  /* Purple placeholder text */
+  color: var(--bs-secondary-color) !important;  /* Purple placeholder text */
   opacity: 0.6;
 }
 
 /* Form labels */
 .form-label {
-  color: #223459 !important;
+  color: var(--bs-body-color) !important;
 }
 
 /* Form check (checkboxes and radios) */
 .form-check-input {
-  background-color: #F2F1ED !important;
+  background-color: var(--bs-tertiary-bg) !important;
   border-color: var(--bs-border-color) !important;
 }
 
 .form-check-input:checked {
-  background-color: #FFB142 !important;  /* Orange when checked */
-  border-color: #FFB142 !important;
+  background-color: var(--bs-primary) !important;  /* Orange when checked */
+  border-color: var(--bs-primary) !important;
 }
 
 .form-check-input:focus {
-  border-color: #FFB142 !important;
-  box-shadow: 0 0 0 0.25rem rgba(255, 177, 66, 0.25) !important;
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25) !important;
 }
 
 .form-check-label {
-  color: #223459 !important;
+  color: var(--bs-body-color) !important;
 }
 
 /* ============================================
    RETRO THEME CHART COLORS
    From: https://brandguides.brandfolder.com/beautiful-dashboards/themes#retro
+   Used by Chart.js in charts.js
    ============================================ */
 
-/* Define chart color CSS variables */
 :root {
+  /* Define chart color CSS variables */
   --chart-color-1: #223459;  /* Navy blue - Chart 1 */
   --chart-color-2: #6A5AAA;  /* Purple - Chart 2 */
   --chart-color-3: #B45082;  /* Pink/Mauve - Chart 3 */
@@ -279,48 +313,12 @@
   --chart-semantic-negative: #F84444;  /* Red - Error/Negative */
 }
 
-/* Chart color utility classes */
-.chart-color-1 { color: var(--chart-color-1) !important; background-color: var(--chart-color-1) !important; }
-.chart-color-2 { color: var(--chart-color-2) !important; background-color: var(--chart-color-2) !important; }
-.chart-color-3 { color: var(--chart-color-3) !important; background-color: var(--chart-color-3) !important; }
-.chart-color-4 { color: var(--chart-color-4) !important; background-color: var(--chart-color-4) !important; }
-.chart-color-5 { color: var(--chart-color-5) !important; background-color: var(--chart-color-5) !important; }
-.chart-color-6 { color: var(--chart-color-6) !important; background-color: var(--chart-color-6) !important; }
-.chart-positive { color: var(--chart-semantic-positive) !important; background-color: var(--chart-semantic-positive) !important; }
-.chart-negative { color: var(--chart-semantic-negative) !important; background-color: var(--chart-semantic-negative) !important; }
-
-/* Text-only chart color classes */
-.text-chart-1 { color: var(--chart-color-1) !important; }
-.text-chart-2 { color: var(--chart-color-2) !important; }
-.text-chart-3 { color: var(--chart-color-3) !important; }
-.text-chart-4 { color: var(--chart-color-4) !important; }
-.text-chart-5 { color: var(--chart-color-5) !important; }
-.text-chart-6 { color: var(--chart-color-6) !important; }
-.text-chart-positive { color: var(--chart-semantic-positive) !important; }
-.text-chart-negative { color: var(--chart-semantic-negative) !important; }
-
-/* Background-only chart color classes */
-.bg-chart-1 { background-color: var(--chart-color-1) !important; }
-.bg-chart-2 { background-color: var(--chart-color-2) !important; }
-.bg-chart-3 { background-color: var(--chart-color-3) !important; }
-.bg-chart-4 { background-color: var(--chart-color-4) !important; }
-.bg-chart-5 { background-color: var(--chart-color-5) !important; }
-.bg-chart-6 { background-color: var(--chart-color-6) !important; }
-.bg-chart-positive { background-color: var(--chart-semantic-positive) !important; }
-.bg-chart-negative { background-color: var(--chart-semantic-negative) !important; }
-
 /* ============================================
    CUSTOM GRADIENT BACKGROUNDS
    ============================================ */
 
-/* Gradient using primary and secondary colors */
-/* Used in: body.bg-gradient (index.html) */
+/* Solid background using body color */
+/* Used in: body.bg-gradient (all HTML pages) */
 .bg-gradient {
-  background:var( --bs-body-bg)!important;
+  background: var(--bs-body-bg) !important;
 }
-
-/* Gradient With TWO Colours
-.bg-gradient {
-  background: linear-gradient(135deg, var(--bs-primary), var(--bs-secondary)) !important;
-}
- */
