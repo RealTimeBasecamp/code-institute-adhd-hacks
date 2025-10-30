@@ -295,6 +295,11 @@
   color: var(--bs-body-color) !important;
 }
 
+#spotify-embed {
+  background-color: var(--bs-tertiary-bg) !important;
+  border: 1px solid var(--bs-border-color) !important;
+}
+
 /* ============================================
    RETRO THEME CHART COLORS
    From: https://brandguides.brandfolder.com/beautiful-dashboards/themes#retro
