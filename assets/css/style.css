@@ -1,7 +1,3 @@
-/* ============================================
-   Bootstrap Theme Customization
-   Only includes CSS variables for elements actually used in the site
-   ============================================ */
 
 /* Light mode (default) - RETRO THEME */
 /* Color palette inspired by: https://brandguides.brandfolder.com/beautiful-dashboards/themes#retro */
@@ -136,10 +132,10 @@
 .btn-outline-primary {
   --bs-btn-color: var(--bs-primary) !important;
   --bs-btn-border-color: var(--bs-primary) !important;
-  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-color: var(--bs-body-color) !important;
   --bs-btn-hover-bg: var(--bs-primary) !important;
   --bs-btn-hover-border-color: var(--bs-primary) !important;
-  --bs-btn-active-color: #fff !important;
+  --bs-btn-active-color: var(--bs-body-color) !important;
   --bs-btn-active-bg: var(--bs-primary) !important;
   --bs-btn-active-border-color: var(--bs-primary) !important;
   --bs-btn-disabled-color: var(--bs-primary) !important;
