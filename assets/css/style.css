@@ -50,6 +50,10 @@
   /* Light mode: Dark text works well on both orange and purple */
   --bs-btn-primary-color: #000000 !important;    /* Dark navy text on orange primary buttons */
   --bs-btn-secondary-color: #ffffff !important;  /* Dark navy text on purple secondary buttons */
+  
+  /* ===== BORDER RADIUS ===== */
+  /* Bootstrap rounded-5 = 1rem */
+  --bs-border-radius-lg: 1rem !important;
 }
 
 /* Dark mode - Based on Retro theme with adjusted contrast */
@@ -57,13 +61,13 @@
   /* ===== PRIMARY COLOR ===== */
   /* Used in: .btn-primary, .btn-outline-primary, links */
   /* Lighter, more saturated orange for visibility on dark backgrounds */
-  --bs-primary: #FFC870 !important;           /* Lighter warm orange (brighter than light mode #FFB142) */
+  --bs-primary: #FFB142 !important;           /* Lighter warm orange (brighter than light mode #FFB142) */
   --bs-primary-rgb: 255, 200, 112 !important;
   
   /* ===== SECONDARY COLOR ===== */
   /* Used in: .btn-secondary (footer "Back to Home" buttons) */
   /* Lighter purple with increased saturation for dark mode */
-  --bs-secondary: #8B7BC8 !important;         /* Lighter purple (brighter than light mode #6A5AAA) */
+  --bs-secondary: #6A5AAA !important;         /* Lighter purple (brighter than light mode #6A5AAA) */
   --bs-secondary-rgb: 139, 123, 200 !important;
   
   /* ===== BODY COLORS ===== */
@@ -102,6 +106,10 @@
   /* Dark mode: Swapped for better contrast - light text on both buttons */
   --bs-btn-primary-color: #000000 !important;    /* Light text on orange primary buttons */
   --bs-btn-secondary-color: #ffffff !important;  /* Light text on purple secondary buttons */
+  
+  /* ===== BORDER RADIUS ===== */
+  /* Bootstrap rounded-5 = 1rem */
+  --bs-border-radius-lg: 1rem !important;
 }
 
 /* ============================================
@@ -263,21 +271,14 @@
   border-radius: var(--bs-border-radius-lg) !important; /* Rounded corners on all items */
 }
 
-.accordion-item:first-of-type {
-  border-top-left-radius: var(--bs-border-radius-lg) !important;
-  border-top-right-radius: var(--bs-border-radius-lg) !important;
-}
-
 .accordion-item:last-of-type {
-  border-bottom-left-radius: var(--bs-border-radius-lg) !important;
-  border-bottom-right-radius: var(--bs-border-radius-lg) !important;
   margin-bottom: 0 !important; /* No margin on last item */
 }
 
 .accordion-button {
   background-color: var(--bs-tertiary-bg) !important;
   color: var(--bs-body-color) !important;
-  padding: 0.75rem 1.25rem !important; /* Compact padding */
+  padding: 0.5rem 1.25rem 0.75rem 1.25rem !important; /* Remove top padding, keep bottom and sides */
   border-radius: var(--bs-border-radius-lg) !important;
   font-size: 1rem; /* Normal font size */
   box-shadow: none !important; /* Remove blue focus outline */
@@ -300,15 +301,23 @@
   display: inline-block;
 }
 
+/* When accordion is collapsed, round all corners of button */
+.accordion-button.collapsed {
+  border-radius: var(--bs-border-radius-lg) !important;
+}
+
+/* When accordion is expanded, only round top corners of button */
 .accordion-button:not(.collapsed) {
   background-color: var(--bs-tertiary-bg) !important;
   color: var(--bs-body-color) !important;
-  box-shadow: none !important; /* Remove blue focus outline when open */
+  border-radius: var(--bs-border-radius-lg) var(--bs-border-radius-lg) 0 0 !important;
+  box-shadow: none !important;
 }
 
 .accordion-body {
   background-color: var(--bs-tertiary-bg) !important;
   color: var(--bs-body-color) !important;
+  border-radius: 0 0 var(--bs-border-radius-lg) var(--bs-border-radius-lg) !important; /* Round bottom corners */
   padding: 1.25rem !important; /* Reduced padding for more compact look */
   font-size: 0.95rem; /* Slightly smaller text */
   line-height: 1.6; /* Better readability */
