@@ -59,7 +59,7 @@ Retro theme inspired by [Smartsheet Dashboard Design Color Themes](https://www.s
 ### Placeholder Images
 [Dummy Image Generator](https://dummyimage.com/) was used to create placeholder images for responsive chart development.
 
-![Dummy image generator](/assets/images/dummy-images.png "Dummy images diagram")
+![Dummy image generator](dummy-images-diagram.png)
 
 ### Design Approach
 Detailed wireframes were used instead of user stories due to the 3-day project timeline, providing clear user flow and journey mapping.
