@@ -6,9 +6,9 @@
     <title>ADHD Hacks</title>
     <!-- Inline script to prevent flash of light mode -->
     <script>
-      (function() {
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      (function () {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-bs-theme", savedTheme);
       })();
     </script>
     <link
@@ -18,7 +18,7 @@
       crossorigin="anonymous"
     />
   </head>
-<body class="d-flex flex-column min-vh-100">
+  <body class="d-flex flex-column min-vh-100">
     <header>
       <nav class="navbar navbar-expand-sm bg-body-tertiary" id="navbar">
         <div class="container">
@@ -72,12 +72,14 @@
       </nav>
     </header>
 
-  <main class="flex-fill">
+    <main class="flex-fill">
       <!-- Youtube video section -->
       <section class="mx-2 mx-md-0">
-        <div class="text-center p-3">
-        <h1 class="text-center">ADHD Hacks</h1>
-        <p>A platform designed to help adults understand and manage their ADHD.</p>
+        <div class="text-center pt-3">
+          <h1 class="text-center">ADHD Hacks</h1>
+          <p>
+            A platform designed to help adults understand and manage their ADHD.
+          </p>
         </div>
         <div class="container bg-light-subtle p-2 text-center rounded-3">
           <div class="row">
@@ -97,13 +99,29 @@
         </div>
       </section>
 
+      <section class="py-3">
+        <div class="container-fluid" style="background-image:
+        url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1176'); background-size: cover; min-height: h-100;
+        background-position: center; background-repeat: no-repeat;">
+        <div class="row justify-content-center">
+          <div class="col-11 col-sm-10 col-md-8 col-lg-6 text-center p-4 m-4 bg-body-tertiary rounded">
+            <h2 class="pb-3">Who are you?</h2>
+            <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center">
+              <a href="resources.html" class="btn btn-primary">I have ADHD</a>
+              <a href="resources.html" class="btn btn-secondary">I know someone with ADHD</a>
+            </div>
+            <p class="pt-3">Not sure if you have ADHD? Try out our screening test <a href="https://adhduk.co.uk/adult-adhd-screening-survey/">here</a>.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Cards section -->
       <section>
         <br />
         <h2 class="text-center p-2">What do you need help with?</h2>
         <div class="container my-4">
-          <div class="row text-center">
-            <div class="col-4">
+          <div class="row text-center g-3">
+            <div class="col-12 col-lg-4">
               <div class="card h-100">
                 <div class="text-center p-3">
                   <i class="fa-solid fa-binoculars display-2"></i>
@@ -112,13 +130,16 @@
                   <h5 class="card-title">Explore resources</h5>
                   <p class="card-text">
                     Checkout our curated list of resources to help you manage
-                    your ADHD effectively. We've got tips, music, videos and products to assist you on your journey.
+                    your ADHD effectively. We've got tips, music, videos and
+                    products to assist you on your journey.
                   </p>
-                  <a href="resources.html" class="btn btn-primary">Explore Resources</a>
+                  <a href="resources.html" class="btn btn-primary"
+                    >Explore Resources</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-lg-4">
               <div class="card h-100">
                 <div class="text-center p-3">
                   <i class="fa-solid fa-question display-2"></i>
@@ -126,13 +147,16 @@
                 <div class="card-body">
                   <h5 class="card-title">Feeling lost?</h5>
                   <p class="card-text">
-                    Not sure if you or someone you know has ADHD? Learn about the symptoms and find out how to get a proper diagnosis.
+                    Not sure if you or someone you know has ADHD? Learn about
+                    the symptoms and find out how to get a proper diagnosis.
                   </p>
-                  <a href="get-diagnosed.html" class="btn btn-primary">Get Diagnosed</a>
+                  <a href="get-diagnosed.html" class="btn btn-primary"
+                    >Get Diagnosed</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-lg-4">
               <div class="card h-100">
                 <div class="text-center p-3">
                   <i class="fa-solid fa-message display-2"></i>
@@ -140,7 +164,8 @@
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title">Get help</h5>
                   <p class="card-text">
-                    Get in touch to start your diagnosis journey or to find out more about ADHD and how to manage it.
+                    Get in touch to start your diagnosis journey or to find out
+                    more about ADHD and how to manage it.
                   </p>
                   <div class="mt-auto">
                     <a href="contact.html" class="btn btn-primary">Get Help</a>
@@ -151,220 +176,210 @@
           </div>
         </div>
       </section>
-
-      <section>
-        <div class="container-fluid" style="background-image:
-        url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1176'); background-size: cover; min-height: 20vh;
-        background-position: center; background-repeat: no-repeat;">
-        <div class="text-center p-4">
-          <h2>Who are you?</h2>
-          <button type="button" class="btn btn-primary">I have ADHD</button>
-          <button type="button" class="btn btn-secondary">I know someone with ADHD</button>
-          <p>Not sure if you have ADHD? Try out our screening test <a href="https://adhduk.co.uk/adult-adhd-screening-survey/">here</a>.</p>
-        </div>
-      </section>
     </main>
 
-
-      <section>
-        <section class="container text-center bg-dark-subtle rounded p-4 my-4">
-      <h2 class="py-2">What types of ADHD are there?</h2>
-      <div
-        class="btn-group"
-        role="group"
-        aria-label="Basic radio toggle button group"
-      >
-        <input
-          type="radio"
-          class="btn-check"
-          name="btnradio"
-          id="btnradio1"
-          autocomplete="off"
-          checked
-        />
-        <label class="btn btn-outline-primary" for="btnradio1"
-          >Inatentive</label
+    <section>
+      <section class="container text-center p-4 my-4">
+        <h2 class="py-2">What types of ADHD are there?</h2>
+        <div
+          class="btn-group"
+          role="group"
+          aria-label="Basic radio toggle button group"
         >
+          <input
+            type="radio"
+            class="btn-check"
+            name="btnradio"
+            id="btnradio1"
+            autocomplete="off"
+            checked
+          />
+          <label class="btn btn-outline-primary" for="btnradio1"
+            >Inatentive</label
+          >
 
-        <input
-          type="radio"
-          class="btn-check"
-          name="btnradio"
-          id="btnradio2"
-          autocomplete="off"
-        />
-        <label class="btn btn-outline-primary" for="btnradio2"
-          >Hyperactive</label
-        >
+          <input
+            type="radio"
+            class="btn-check"
+            name="btnradio"
+            id="btnradio2"
+            autocomplete="off"
+          />
+          <label class="btn btn-outline-primary" for="btnradio2"
+            >Hyperactive</label
+          >
 
-        <input
-          type="radio"
-          class="btn-check"
-          name="btnradio"
-          id="btnradio3"
-          autocomplete="off"
-        />
-        <label class="btn btn-outline-primary" for="btnradio3">Combined</label>
-      </div>
-      <!-- Content area -->
-      <div class="card mt-3">
-        <div class="card-body">
-          <div id="content1" class="content-block">
-            <strong>Predominantly Inattentive Presentation (ADHD-PI)</strong>
-            Often what people used to call ADD.
-
-            <p class="display-5 pt-4">Main traits:</p>
-            <ul class="list-group">
-              <li class="list-group-item text-start">
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  value=""
-                  id="firstCheckbox"
-                  checked
-                />
-                <label class="form-check-label disabled" for="firstCheckbox">
-                  Difficulty sustaining attention or following through on tasks
-                </label>
-              </li>
-              <li class="list-group-item text-start">
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  value=""
-                  id="secondCheckbox"
-                  checked
-                />
-                <label class="form-check-label" for="secondCheckbox"
-                  >Often seems “spaced out” or forgetful Loses things easily,
-                </label>
-              </li>
-              <li class="list-group-item text-start">
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  value=""
-                  id="thirdCheckbox"
-                  checked
-                />
-                <label class="form-check-label" for="thirdCheckbox"
-                  >avoids mentally demanding work
-                </label>
-              </li>
-              <li class="list-group-item text-start">
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  value=""
-                  id="fourthCheckbox"
-                  checked
-                />
-                <label class="form-check-label" for="fourthCheckbox"
-                  >Makes careless mistakes or struggles with organization.
-                </label>
-              </li>
-            </ul>
-          </div>
-          <div id="content2" class="content-block d-none">
-            <strong
-              >Predominantly Hyperactive-Impulsive Presentation
-              (ADHD-HI)</strong
-            >
-            <p class="mt-2">
-              This type is more common in younger children, especially boys.
-            </p>
-
-            <p class="display-5 pt-4">Main traits:</p>
-            <ul class="list-group">
-              <li class="list-group-item text-start">
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  value=""
-                  id="hyperactiveCheckbox1"
-                  checked
-                />
-                <label class="form-check-label" for="hyperactiveCheckbox1">
-                  Fidgeting, restlessness, trouble sitting still
-                </label>
-              </li>
-              <li class="list-group-item text-start">
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  value=""
-                  id="hyperactiveCheckbox2"
-                  checked
-                />
-                <label class="form-check-label" for="hyperactiveCheckbox2">
-                  Talks excessively, interrupts others
-                </label>
-              </li>
-              <li class="list-group-item text-start">
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  value=""
-                  id="hyperactiveCheckbox3"
-                  checked
-                />
-                <label class="form-check-label" for="hyperactiveCheckbox3">
-                  Acts before thinking
-                </label>
-              </li>
-              <li class="list-group-item text-start">
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  value=""
-                  id="hyperactiveCheckbox4"
-                  checked
-                />
-                <label class="form-check-label" for="hyperactiveCheckbox4">
-                  Feels constantly "on the go"
-                </label>
-              </li>
-            </ul>
-          </div>
-          <div id="content3" class="content-block d-none">
-            <strong>Combined Presentation (ADHD-C)</strong>
-            <p class="mt-2">This is the most common diagnosis in adults.</p>
-
-            <p class="display-5 pt-4">Main traits:</p>
-            <ul class="list-group">
-              <li class="list-group-item text-start">
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  value=""
-                  id="combinedCheckbox1"
-                  checked
-                />
-                <label class="form-check-label" for="combinedCheckbox1">
-                  Meets criteria for both inattentive and hyperactive-impulsive
-                  symptoms
-                </label>
-              </li>
-            </ul>
-          </div>
+          <input
+            type="radio"
+            class="btn-check"
+            name="btnradio"
+            id="btnradio3"
+            autocomplete="off"
+          />
+          <label class="btn btn-outline-primary" for="btnradio3"
+            >Combined</label
+          >
         </div>
-      </div>
-    </section>
-      </section>
+        <!-- Content area -->
+        <div class="card mt-3">
+          <div class="card-body">
+            <div id="content1" class="content-block">
+              <strong>Predominantly Inattentive Presentation (ADHD-PI)</strong>
+              Often what people used to call ADD.
 
+              <p class="display-5 pt-4">Main traits:</p>
+              <ul class="list-group">
+                <li class="list-group-item text-start bg-body-tertiary">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    value=""
+                    id="firstCheckbox"
+                    checked
+                  />
+                  <label class="form-check-label disabled" for="firstCheckbox">
+                    Difficulty sustaining attention or following through on
+                    tasks
+                  </label>
+                </li>
+                <li class="list-group-item text-start bg-body-tertiary">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    value=""
+                    id="secondCheckbox"
+                    checked
+                  />
+                  <label class="form-check-label" for="secondCheckbox"
+                    >Often seems “spaced out” or forgetful Loses things easily,
+                  </label>
+                </li>
+                <li class="list-group-item text-start bg-body-tertiary">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    value=""
+                    id="thirdCheckbox"
+                    checked
+                  />
+                  <label class="form-check-label" for="thirdCheckbox"
+                    >avoids mentally demanding work
+                  </label>
+                </li>
+                <li class="list-group-item text-start bg-body-tertiary">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    value=""
+                    id="fourthCheckbox"
+                    checked
+                  />
+                  <label class="form-check-label" for="fourthCheckbox"
+                    >Makes careless mistakes or struggles with organization.
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div id="content2" class="content-block d-none">
+              <p class="mt-2">
+                <strong
+                  >Predominantly Hyperactive-Impulsive Presentation
+                  (ADHD-HI)</strong
+                >
+                This type is more common in younger children, especially boys.
+              </p>
 
-      <!-- Generic footer buttons -->
-      <section>
-        <div class="container text-center p-3">
-          <div class="row text-center">
-            <div class="col-12">
-              <a href="#navbar" class="btn btn-secondary">Back to Home</a>
-              <a href="contact.html" class="btn btn-primary">Get in touch</a>
+              <p class="display-5 pt-4">Main traits:</p>
+              <ul class="list-group">
+                <li class="list-group-item text-start bg-body-tertiary">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    value=""
+                    id="hyperactiveCheckbox1"
+                    checked
+                  />
+                  <label class="form-check-label" for="hyperactiveCheckbox1">
+                    Fidgeting, restlessness, trouble sitting still
+                  </label>
+                </li>
+                <li class="list-group-item text-start bg-body-tertiary">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    value=""
+                    id="hyperactiveCheckbox2"
+                    checked
+                  />
+                  <label class="form-check-label" for="hyperactiveCheckbox2">
+                    Talks excessively, interrupts others
+                  </label>
+                </li>
+                <li class="list-group-item text-start bg-body-tertiary">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    value=""
+                    id="hyperactiveCheckbox3"
+                    checked
+                  />
+                  <label class="form-check-label" for="hyperactiveCheckbox3">
+                    Acts before thinking
+                  </label>
+                </li>
+                <li class="list-group-item text-start bg-body-tertiary">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    value=""
+                    id="hyperactiveCheckbox4"
+                    checked
+                  />
+                  <label class="form-check-label" for="hyperactiveCheckbox4">
+                    Feels constantly "on the go"
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div id="content3" class="content-block d-none">
+              <p class="mt-2">
+                <strong>Combined Presentation (ADHD-C)</strong> This is the most
+                common diagnosis in adults.
+              </p>
+
+              <p class="display-5 pt-4">Main traits:</p>
+              <ul class="list-group">
+                <li class="list-group-item text-start bg-body-tertiary">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    value=""
+                    id="combinedCheckbox1"
+                    checked
+                  />
+                  <label class="form-check-label" for="combinedCheckbox1">
+                    Meets criteria for both inattentive and
+                    hyperactive-impulsive symptoms
+                  </label>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
+    </section>
 
+    <!-- Generic footer buttons -->
+    <section>
+      <div class="container text-center p-3">
+        <div class="row text-center">
+          <div class="col-12">
+            <a href="#navbar" class="btn btn-secondary">Back to Home</a>
+            <a href="contact.html" class="btn btn-primary">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <div class="container-fluid bg-body-tertiary text-center pt-3 mt-4">
@@ -390,7 +405,7 @@
         </div>
 
         <p class="mb-0">&copy; 2024 ADHD Hacks. All rights reserved.</p>
-              <a
+        <a
           href="https://github.com/RealTimeBasecamp/code-institute-adhd-hacks"
           class="fa-brands fa-github text-black"
           style="text-decoration: none"
@@ -431,15 +446,15 @@
       const darkModeIcon = document.getElementById("dark-mode-icon");
 
       // Restore the toggle switch state based on saved theme
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      themeSwitch.checked = savedTheme === 'dark';
-      darkModeIcon.classList.toggle("fa-sun", savedTheme === 'dark');
-      darkModeIcon.classList.toggle("fa-moon", savedTheme === 'light');
+      const savedTheme = localStorage.getItem("theme") || "light";
+      themeSwitch.checked = savedTheme === "dark";
+      darkModeIcon.classList.toggle("fa-sun", savedTheme === "dark");
+      darkModeIcon.classList.toggle("fa-moon", savedTheme === "light");
 
       themeSwitch.addEventListener("change", () => {
         const theme = themeSwitch.checked ? "dark" : "light";
         html.dataset.bsTheme = theme;
-        localStorage.setItem('theme', theme);
+        localStorage.setItem("theme", theme);
         darkModeIcon.classList.toggle("fa-sun", themeSwitch.checked);
         darkModeIcon.classList.toggle("fa-moon", !themeSwitch.checked);
       });
