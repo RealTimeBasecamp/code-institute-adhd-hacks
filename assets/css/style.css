@@ -187,6 +187,8 @@
   background-color: var(--bs-tertiary-bg) !important;
   border-color: var(--bs-border-color) !important;
   color: var(--bs-body-color) !important;
+  border-radius: var(--bs-border-radius-lg) !important; /* Bootstrap's rounded-4 = 0.5rem */
+  overflow: hidden; /* Ensures images respect rounded corners */
 }
 
 .card-body {
