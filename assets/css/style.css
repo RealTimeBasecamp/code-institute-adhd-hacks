@@ -214,6 +214,21 @@
   padding: 1.5rem !important; /* Generous padding for all cards */
 }
 
+/* Reduce card padding on small screens */
+@media (max-width: 575.98px) {
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  .card.m-3 {
+    margin: 1rem !important;
+  }
+  
+  .card.pt-3 {
+    padding-top: 1rem !important;
+  }
+}
+
 .card-title {
   color: var(--bs-body-color) !important;
 }
