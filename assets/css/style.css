@@ -210,6 +210,16 @@
   color: var(--bs-body-color) !important;
 }
 
+/* Image background for dark mode */
+.img-bg-white-dark {
+  background-color: transparent;
+  padding: 0.5rem;
+}
+
+[data-bs-theme="dark"] .img-bg-white-dark {
+  background-color: #F2F1ED;
+}
+
 .card-text {
   color: var(--bs-body-color) !important;
 }
