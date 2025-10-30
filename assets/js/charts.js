@@ -1,20 +1,5 @@
-// Get Retro theme chart colors from CSS variables
-const getChartColor = (varName) => {
-  return getComputedStyle(document.documentElement)
-    .getPropertyValue(varName)
-    .trim();
-};
-
-const retroColors = {
-  color1: getChartColor("--chart-color-1"), // #223459 Navy
-  color2: getChartColor("--chart-color-2"), // #6A5AAA Purple
-  color3: getChartColor("--chart-color-3"), // #B45082 Pink
-  color4: getChartColor("--chart-color-4"), // #F9767F Coral
-  color5: getChartColor("--chart-color-5"), // #FFB142 Orange
-  color6: getChartColor("--chart-color-6"), // #FFDE70 Yellow
-  positive: getChartColor("--chart-semantic-positive"), // #37CD97 Green
-  negative: getChartColor("--chart-semantic-negative"), // #F84444 Red
-};
+// Get CSS variable value
+const getCSSVar = (varName) => getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
 
 // ADHD Pie Chart (Doughnut)
 const ctx = document.getElementById("adhdPieChart");
@@ -32,9 +17,9 @@ new Chart(ctx, {
         label: "Adult ADHD Distribution",
         data: [2.6, 6.8, 90.6],
         backgroundColor: [
-          retroColors.color4, // Coral for Persistent ADHD
-          retroColors.color5, // Orange for Symptomatic ADHD
-          retroColors.positive, // Green for No ADHD
+          getCSSVar("--chart-color-3"), // Pink for Persistent ADHD
+          getCSSVar("--chart-color-2"), // Purple for Symptomatic ADHD
+          getCSSVar("--chart-color-5"), // Orange for No ADHD
         ],
         hoverOffset: 4,
       },
@@ -58,16 +43,16 @@ new Chart(ctxBar, {
         label: "ADHD Prevalence (%)",
         data: [6.5, 12, 31],
         backgroundColor: [
-          retroColors.color2 + "cc", // Purple with 80% opacity
-          retroColors.color5 + "cc", // Orange with 80% opacity
-          retroColors.color4 + "cc", // Coral with 80% opacity
+          getCSSVar("--chart-color-2"), // Purple
+          getCSSVar("--chart-color-5"), // Orange
+          getCSSVar("--chart-color-4"), // Coral
         ],
         borderColor: [
-          retroColors.color2, // Purple
-          retroColors.color5, // Orange
-          retroColors.color4, // Coral
+          "#ffffff", // White border
+          "#ffffff",
+          "#ffffff",
         ],
-        borderWidth: 2,
+        borderWidth: 3,
       },
     ],
   },
