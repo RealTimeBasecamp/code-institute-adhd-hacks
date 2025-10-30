@@ -406,6 +406,35 @@ section {
   padding: 1.5rem !important;
 }
 
+/* Font Awesome icons - use body text color */
+.fa-solid,
+.fa-brands,
+.fa-regular,
+[class^="fa-"],
+[class*=" fa-"] {
+  color: var(--bs-body-color) !important;
+}
+
+/* Icon links should also use body color and remove default link styling */
+a.fa-solid,
+a.fa-brands,
+a.fa-regular,
+a[class^="fa-"],
+a[class*=" fa-"] {
+  color: var(--bs-body-color) !important;
+  text-decoration: none !important;
+}
+
+/* Hover state for icon links */
+a.fa-solid:hover,
+a.fa-brands:hover,
+a.fa-regular:hover,
+a[class^="fa-"]:hover,
+a[class*=" fa-"]:hover {
+  color: var(--bs-primary) !important;
+  opacity: 0.8;
+}
+
 /* Icon containers in cards */
 .card .text-center:first-child {
   padding: 1.5rem !important;
