@@ -449,6 +449,11 @@ a[class*=" fa-"] {
   text-decoration: none !important;
 }
 
+/* Navbar brand brain icon - use primary color in dark mode only */
+[data-bs-theme="dark"] .navbar-brand .fa-brain {
+  color: var(--bs-primary) !important;
+}
+
 /* Hover state for icon links */
 a.fa-solid:hover,
 a.fa-brands:hover,
