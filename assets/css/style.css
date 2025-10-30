@@ -177,6 +177,15 @@
 }
 
 /* ============================================
+   CAPSULE/PILL BUTTON STYLING
+   Apply to all button variants (except outline buttons used for radio toggles)
+   ============================================ */
+
+.btn:not(.btn-outline-primary) {
+  border-radius: 50rem !important; /* Fully rounded ends = capsule/pill shape */
+}
+
+/* ============================================
    CARD & LIST GROUP STYLING
    ============================================ */
 
