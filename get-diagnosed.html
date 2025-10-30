@@ -158,16 +158,17 @@
               </div>
               <div class="row py-3">
                 <div class="col-12">
-                  <img
-                    class="w-100"
-                    src="https://dummyimage.com/512x128/000/fff&text=Bar+chart"
-                    alt=""
-                  />
+                  <div style="position: relative; height: 300px">
+                    <canvas id="adhdBarChart"></canvas>
+                  </div>
                   <p class="justify-">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid, molestiae sint nesciunt, perspiciatis cupiditate
-                    accusantium nihil magnam pariatur quos ea repellendus harum!
-                    Quis, fugiat temporibus.
+                    In England, ADHD is more common among people who are
+                    unemployed or receiving out-of-work benefits, and strongly
+                    linked to substance misuse and social disadvantage. Around
+                    12% of people in treatment for substance use disorders and
+                    31% of ex-prisoners have ADHD, compared to roughly 6–7% in
+                    the general adult population. These figures show that ADHD
+                    is far more prevalent in vulnerable and marginalised groups.
                   </p>
                 </div>
               </div>
@@ -253,6 +254,62 @@
               hoverOffset: 4,
             },
           ],
+        },
+      });
+    </script>
+
+    <script>
+      const ctxBar = document.getElementById("adhdBarChart");
+
+      new Chart(ctxBar, {
+        type: "bar",
+        data: {
+          labels: [
+            "General Population",
+            "Substance Use Treatment",
+            "Ex-Prisoners",
+          ],
+          datasets: [
+            {
+              label: "ADHD Prevalence (%)",
+              data: [6.5, 12, 31],
+              backgroundColor: [
+                "rgba(54, 162, 235, 0.8)",
+                "rgba(255, 206, 86, 0.8)",
+                "rgba(255, 99, 132, 0.8)",
+              ],
+              borderColor: [
+                "rgb(54, 162, 235)",
+                "rgb(255, 206, 86)",
+                "rgb(255, 99, 132)",
+              ],
+              borderWidth: 2,
+            },
+          ],
+        },
+        options: {
+          indexAxis: "y",
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              beginAtZero: true,
+              max: 35,
+              title: {
+                display: true,
+                text: "Percentage (%)",
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            title: {
+              display: true,
+              text: "ADHD Prevalence in Different Populations (England)",
+            },
+          },
         },
       });
     </script>
