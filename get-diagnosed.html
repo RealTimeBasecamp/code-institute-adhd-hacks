@@ -48,7 +48,11 @@
     <header>
       <nav class="navbar navbar-expand-sm bg-transparent" id="navbar">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <a
+            class="navbar-brand"
+            href="index.html"
+            aria-label="ADHD Hacks Home"
+          >
             <i class="fa-solid fa-brain display-6"></i>
           </a>
           <!--This button appears when screen size is less than 576px-->
@@ -72,12 +76,17 @@
               <!-- Darkmode toggle -->
 
               <div class="form-check form-switch mt-2" id="dark">
-                <i class="fa-solid fa-moon me-2" id="dark-mode-icon"></i>
+                <i
+                  class="fa-solid fa-moon me-2"
+                  id="dark-mode-icon"
+                  aria-hidden="true"
+                ></i>
                 <input
                   class="form-check-input"
                   type="checkbox"
                   role="switch"
                   id="themeSwitch"
+                  aria-label="Toggle dark mode"
                 />
               </div>
               <li class="nav-item">
@@ -115,7 +124,11 @@
           <div class="row text-center pb-3 g-3">
             <div class="col-12 col-md-6">
               <div class="card h-100 d-flex flex-column">
-                <a href="https://adhduk.co.uk/right-to-choose/">
+                <a
+                  href="https://adhduk.co.uk/right-to-choose/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src="assets/images/NHS-Right-To-Choose.png"
                     class="card-img-top px-3 pt-2 img-bg-white-dark"
@@ -132,6 +145,8 @@
                     <a
                       href="https://adhduk.co.uk/right-to-choose/"
                       class="btn btn-secondary"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       >Visit NHS Right to Choose</a
                     >
                   </div>
@@ -140,7 +155,11 @@
             </div>
             <div class="col-12 col-md-6">
               <div class="card h-100 d-flex flex-column">
-                <a href="https://www.problemshared.net/">
+                <a
+                  href="https://www.problemshared.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src="assets/images/problem-shared.png"
                     class="card-img-top px-3 pt-2 img-bg-white-dark"
@@ -158,6 +177,8 @@
                     <a
                       href="https://www.problemshared.net/"
                       class="btn btn-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       >Visit Problem Shared</a
                     >
                   </div>
@@ -186,6 +207,7 @@
                     <a
                       href="https://jogh.org/documents/2021/jogh-11-04009.pdf"
                       target="_blank"
+                      rel="noopener noreferrer"
                       >Journal of Global Health - Adult ADHD Study</a
                     >
                   </p>
@@ -219,6 +241,7 @@
                       <a
                         href="https://digital.nhs.uk/data-and-information/publications/statistical/adult-psychiatric-morbidity-survey/survey-of-mental-health-and-wellbeing-england-2023-24/attention-deficit-hyperactivity-disorder"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         NHS Digital - Adult Psychiatric Morbidity Survey
                       </a>
@@ -255,16 +278,25 @@
             href="https://www.instagram.com/"
             class="fa-brands fa-instagram h4"
             style="text-decoration: none"
+            aria-label="Visit our Instagram page"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
           <a
             href="https://www.youtube.com/"
             class="fa-brands fa-youtube h4"
             style="text-decoration: none"
+            aria-label="Visit our YouTube channel"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
           <a
             href="https://www.linkedin.com/"
             class="fa-brands fa-linkedin h4"
             style="text-decoration: none"
+            aria-label="Visit our LinkedIn page"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
         </div>
 
@@ -273,6 +305,9 @@
           href="https://github.com/RealTimeBasecamp/code-institute-adhd-hacks"
           class="fa-brands fa-github text-black"
           style="text-decoration: none"
+          aria-label="View source code on GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
         ></a>
       </div>
     </footer>

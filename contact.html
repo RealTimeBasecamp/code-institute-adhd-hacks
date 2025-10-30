@@ -47,7 +47,11 @@
     <header>
       <nav class="navbar navbar-expand-sm bg-transparent" id="navbar">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <a
+            class="navbar-brand"
+            href="index.html"
+            aria-label="ADHD Hacks Home"
+          >
             <i class="fa-solid fa-brain display-6"></i>
           </a>
           <!--This button appears when screen size is less than 576px-->
@@ -71,12 +75,17 @@
               <!-- Darkmode toggle -->
 
               <div class="form-check form-switch mt-2" id="dark">
-                <i class="fa-solid fa-moon me-2" id="dark-mode-icon"></i>
+                <i
+                  class="fa-solid fa-moon me-2"
+                  id="dark-mode-icon"
+                  aria-hidden="true"
+                ></i>
                 <input
                   class="form-check-input"
                   type="checkbox"
                   role="switch"
                   id="themeSwitch"
+                  aria-label="Toggle dark mode"
                 />
               </div>
               <li class="nav-item">
@@ -104,10 +113,12 @@
           <form action="contact-success.html">
             <div class="row-cols-1 text-start">
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Subject</label
+                <label for="subjectSelect" class="form-label">Subject</label>
+                <select
+                  class="form-select"
+                  id="subjectSelect"
+                  aria-label="Select subject"
                 >
-                <select class="form-select" aria-label="Default select example">
                   <option selected>Submit ADHD Hack</option>
                   <option value="1">General enquiry</option>
                   <option value="2">Feedback</option>
@@ -166,16 +177,25 @@
             href="https://www.instagram.com/"
             class="fa-brands fa-instagram h4"
             style="text-decoration: none"
+            aria-label="Visit our Instagram page"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
           <a
             href="https://www.youtube.com/"
             class="fa-brands fa-youtube h4"
             style="text-decoration: none"
+            aria-label="Visit our YouTube channel"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
           <a
             href="https://www.linkedin.com/"
             class="fa-brands fa-linkedin h4"
             style="text-decoration: none"
+            aria-label="Visit our LinkedIn page"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
         </div>
 
@@ -183,6 +203,9 @@
         <a
           href="https://github.com/RealTimeBasecamp/code-institute-adhd-hacks"
           class="fa-brands fa-github text-black"
+          aria-label="View source code on GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
         ></a>
       </div>
     </footer>

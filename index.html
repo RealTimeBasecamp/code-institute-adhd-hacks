@@ -29,8 +29,8 @@
     <header>
       <nav class="navbar navbar-expand-sm bg-transparent" id="navbar">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <a href="index.html" class="fa-solid fa-brain display-6"></a>
+          <a class="navbar-brand" href="index.html" aria-label="ADHD Hacks Home">
+            <i class="fa-solid fa-brain display-6"></i>
           </a>
           <!--This button appears when screen size is less than 576px-->
           <!-- It is not visible as it's toggled automatically-->
@@ -53,12 +53,13 @@
               <!-- Darkmode toggle -->
 
               <div class="form-check form-switch mt-2" id="dark">
-                <i class="fa-solid fa-moon me-2" id="dark-mode-icon"></i>
+                <i class="fa-solid fa-moon me-2" id="dark-mode-icon" aria-hidden="true"></i>
                 <input
                   class="form-check-input"
                   type="checkbox"
                   role="switch"
                   id="themeSwitch"
+                  aria-label="Toggle dark mode"
                 />
               </div>
               <li class="nav-item">
@@ -117,7 +118,7 @@
               <a href="resources.html" class="btn btn-primary">I have ADHD</a>
               <a href="resources.html" class="btn btn-secondary">I know someone with ADHD</a>
             </div>
-            <p>Not sure if you have ADHD? Try out our screening test <a href="https://adhduk.co.uk/adult-adhd-screening-survey/" target="_blank">here</a>.</p>
+            <p>Not sure if you have ADHD? Try out our screening test <a href="https://adhduk.co.uk/adult-adhd-screening-survey/" target="_blank" rel="noopener noreferrer">here</a>.</p>
           </div>
         </div>
       </section>
@@ -133,6 +134,7 @@
                   <a
                     class="fa-solid fa-binoculars display-2"
                     href="resources.html"
+                    aria-label="Explore resources"
                   ></a>
                 </div>
                 <div class="card-body">
@@ -154,6 +156,7 @@
                   <a
                     class="fa-solid fa-question display-2"
                     href="get-diagnosed.html"
+                    aria-label="Get diagnosed"
                   ></a>
                 </div>
                 <div class="card-body">
@@ -174,6 +177,7 @@
                   <a
                     class="fa-solid fa-message display-2"
                     href="contact.html"
+                    aria-label="Contact us"
                   ></a>
                 </div>
                 <div class="card-body d-flex flex-column">
@@ -193,9 +197,8 @@
       </section>
     </main>
 
-    <section>
-      <section class="container text-center">
-        <h2>What types of ADHD are there?</h2>
+    <section class="container text-center">
+      <h2>What types of ADHD are there?</h2>
         <div
           class="btn-group"
           role="group"
@@ -381,7 +384,6 @@
             </div>
           </div>
         </div>
-      </section>
     </section>
 
     <!-- Generic footer buttons -->
@@ -406,16 +408,25 @@
             href="https://www.instagram.com/"
             class="fa-brands fa-instagram h4"
             style="text-decoration: none"
+            aria-label="Visit our Instagram page"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
           <a
             href="https://www.youtube.com/"
             class="fa-brands fa-youtube h4"
             style="text-decoration: none"
+            aria-label="Visit our YouTube channel"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
           <a
             href="https://www.linkedin.com/"
             class="fa-brands fa-linkedin h4"
             style="text-decoration: none"
+            aria-label="Visit our LinkedIn page"
+            target="_blank"
+            rel="noopener noreferrer"
           ></a>
         </div>
 
@@ -424,6 +435,9 @@
           href="https://github.com/RealTimeBasecamp/code-institute-adhd-hacks"
           class="fa-brands fa-github text-black"
           style="text-decoration: none"
+          aria-label="View source code on GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
         ></a>
       </div>
     </footer>
