@@ -1,0 +1,162 @@
+/* ============================================
+   Bootstrap Theme Customization
+   Only includes CSS variables for elements actually used in the site
+   ============================================ */
+
+/* Light mode (default) */
+:root {
+  /* ===== PRIMARY COLOR ===== */
+  /* Used in: .btn-primary, .btn-outline-primary, links */
+  --bs-primary: #35c7ee !important;           /* Main button background color */
+  --bs-primary-rgb: 53, 199, 238 !important;  /* Same color as RGB for hover/transparency effects */
+  
+  /* ===== SECONDARY COLOR ===== */
+  /* Used in: .btn-secondary (footer "Back to Home" buttons) */
+  --bs-secondary: #334a52 !important;         /* Main button background color */
+  --bs-secondary-rgb: 51, 74, 82 !important;  /* Same color as RGB for hover/transparency effects */
+  
+  /* ===== BODY COLORS ===== */
+  /* Base background and text colors for entire site */
+  --bs-body-bg: #ffffff !important;
+  --bs-body-color: #212529 !important;
+  --bs-body-bg-rgb: 255, 255, 255 !important;
+  --bs-body-color-rgb: 33, 37, 41 !important;
+  
+  /* ===== TERTIARY BACKGROUND ===== */
+  /* Used in: bg-body-tertiary (footer, list-group-items) */
+  --bs-tertiary-bg: #f8f9fa !important;
+  --bs-tertiary-bg-rgb: 248, 249, 250 !important;
+  
+  /* ===== LIGHT SUBTLE ===== */
+  /* Used in: bg-light-subtle (video container) */
+  --bs-light-bg-subtle: #fcfcfd !important;
+}
+
+/* Dark mode */
+[data-bs-theme="dark"] {
+  /* ===== PRIMARY COLOR ===== */
+  /* Used in: .btn-primary, .btn-outline-primary, links */
+  --bs-primary: #35c7ee !important;           /* Main button background color (can be different in dark mode) */
+  --bs-primary-rgb: 53, 199, 238 !important;  /* Same color as RGB for hover/transparency effects */
+  
+  /* ===== SECONDARY COLOR ===== */
+  /* Used in: .btn-secondary (footer "Back to Home" buttons) */
+  --bs-secondary: #334a52 !important;         /* Main button background color (can be different in dark mode) */
+  --bs-secondary-rgb: 51, 74, 82 !important;  /* Same color as RGB for hover/transparency effects */
+  
+  /* ===== BODY COLORS ===== */
+  /* Base background and text colors for entire site in dark mode */
+  --bs-body-bg: #212529 !important;
+  --bs-body-color: #dee2e6 !important;
+  --bs-body-bg-rgb: 33, 37, 41 !important;
+  --bs-body-color-rgb: 222, 226, 230 !important;
+  
+  /* ===== TERTIARY BACKGROUND ===== */
+  /* Used in: bg-body-tertiary (footer, list-group-items) - darker in dark mode */
+  --bs-tertiary-bg: #2b3035 !important;
+  --bs-tertiary-bg-rgb: 43, 48, 53 !important;
+  
+  /* ===== LIGHT SUBTLE ===== */
+  /* Used in: bg-light-subtle (video container) - darker in dark mode */
+  --bs-light-bg-subtle: #343a40 !important;
+  
+  /* ===== DARK COLOR ===== */
+  /* Used in: .btn-dark (carousel navigation buttons in resources.html) */
+  --bs-dark: #212529 !important;
+  --bs-dark-rgb: 33, 37, 41 !important;
+  
+  /* ===== CARD & BORDER ===== */
+  /* Used in: .card components and border utilities */
+  --bs-card-bg: #ffffff !important;
+  --bs-border-color: #dee2e6 !important;
+  --bs-border-color-translucent: rgba(0, 0, 0, 0.175) !important;
+}
+
+/* ============================================
+   BUTTON STYLING - All States
+   ============================================ */
+
+/* Primary Button - .btn-primary */
+/* Used in: Most action buttons (Submit, Get Help, Explore Resources, etc.) */
+.btn-primary {
+  --bs-btn-color: #fff !important;
+  --bs-btn-bg: var(--bs-primary) !important;
+  --bs-btn-border-color: var(--bs-primary) !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: #2ba0bf !important;           /* Darker cyan on hover */
+  --bs-btn-hover-border-color: #2795b3 !important; /* Darker cyan border on hover */
+  --bs-btn-active-color: #fff !important;
+  --bs-btn-active-bg: #2795b3 !important;          /* Even darker when clicked */
+  --bs-btn-active-border-color: #2489a6 !important;
+  --bs-btn-disabled-color: #fff !important;
+  --bs-btn-disabled-bg: var(--bs-primary) !important;
+  --bs-btn-disabled-border-color: var(--bs-primary) !important;
+}
+
+/* Secondary Button - .btn-secondary */
+/* Used in: "Back to Home" footer buttons */
+.btn-secondary {
+  --bs-btn-color: #fff !important;
+  --bs-btn-bg: var(--bs-secondary) !important;
+  --bs-btn-border-color: var(--bs-secondary) !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: #293b42 !important;           /* Darker teal on hover */
+  --bs-btn-hover-border-color: #25363c !important; /* Darker teal border on hover */
+  --bs-btn-active-color: #fff !important;
+  --bs-btn-active-bg: #25363c !important;          /* Even darker when clicked */
+  --bs-btn-active-border-color: #213135 !important;
+  --bs-btn-disabled-color: #fff !important;
+  --bs-btn-disabled-bg: var(--bs-secondary) !important;
+  --bs-btn-disabled-border-color: var(--bs-secondary) !important;
+}
+
+/* Outline Primary Button - .btn-outline-primary */
+/* Used in: Radio button toggle labels (ADHD type selector) */
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary) !important;
+  --bs-btn-border-color: var(--bs-primary) !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: var(--bs-primary) !important;
+  --bs-btn-hover-border-color: var(--bs-primary) !important;
+  --bs-btn-active-color: #fff !important;
+  --bs-btn-active-bg: var(--bs-primary) !important;
+  --bs-btn-active-border-color: var(--bs-primary) !important;
+  --bs-btn-disabled-color: var(--bs-primary) !important;
+  --bs-btn-disabled-bg: transparent !important;
+  --bs-btn-disabled-border-color: var(--bs-primary) !important;
+}
+
+/* Dark Button - .btn-dark */
+/* Used in: Carousel navigation buttons (resources.html) */
+.btn-dark {
+  --bs-btn-color: #fff !important;
+  --bs-btn-bg: #212529 !important;
+  --bs-btn-border-color: #212529 !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: #424649 !important;           /* Lighter on hover */
+  --bs-btn-hover-border-color: #373b3e !important;
+  --bs-btn-active-color: #fff !important;
+  --bs-btn-active-bg: #4d5154 !important;
+  --bs-btn-active-border-color: #373b3e !important;
+  --bs-btn-disabled-color: #fff !important;
+  --bs-btn-disabled-bg: #212529 !important;
+  --bs-btn-disabled-border-color: #212529 !important;
+}
+
+/* ============================================
+   CARD & LIST GROUP STYLING
+   ============================================ */
+
+/* Cards - .card */
+/* Used in: All card components throughout the site */
+.card {
+  --bs-card-bg: var(--bs-body-bg) !important;
+  --bs-card-border-color: var(--bs-border-color-translucent) !important;
+}
+
+/* List Group Items - .list-group-item */
+/* Used in: ADHD traits checklist items */
+.list-group-item {
+  --bs-list-group-bg: var(--bs-body-bg) !important;
+  --bs-list-group-border-color: var(--bs-border-color) !important;
+}
