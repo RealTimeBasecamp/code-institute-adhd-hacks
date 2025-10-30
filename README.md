@@ -33,6 +33,11 @@ https://dummyimage.com/
 Was used to create placeholder images which would contain my responsive charts
 ![Dummy image generator](/assets/images/dummy-images.png "Dummy images diagram")
 
+The color schemes were taken from:
+https://www.smartsheet.com/content-center/product-insights/smartsheet-tips/smartsheet-dashboard-design-color-themes?srsltid=AfmBOooYKlU9GGbAWbqICI2A8KtorllxgUEu6xKvnw6UQAN2-yq-8t0E
+
+![colour scheme inspiration reference](/assets/images/color-scheme.png)
+
 # Implementation:
 https://www.chartjs.org/
 Was used to create the responsive pie and bar charts.
