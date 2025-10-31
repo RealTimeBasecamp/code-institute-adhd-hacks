@@ -25,7 +25,7 @@ Theme switching with localStorage persistence and FOUC prevention, designed for 
 
 ### 3. Interactive Charts
 Chart.js implementation featuring theme-reactive pie and bar charts displaying ADHD statistics with automatic color updates.
-![ChartJs Graph diagram](chartJS-graphs.PNG)
+![ChartJs Graph diagram](/assets/images/chartJS-graphs.PNG)
 
 ### 4. Custom js carosel
 Custom js implementation of a carosel for YouTube shorts. Videos are sampled from an array and loop around.
