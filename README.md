@@ -29,7 +29,7 @@ Chart.js implementation featuring theme-reactive pie and bar charts displaying A
 
 ### 4. Custom js carosel
 Custom js implementation of a carosel for YouTube shorts. Videos are sampled from an array and loop around.
-![custom js carosel diagram](custom-js-carosel.PNG)
+![custom js carosel diagram](/assets/images/custom-js-carosel.PNG)
 
 ### 5. Resource Library
 Curated collection of ADHD management tools including tips, products, music playlists (Spotify embed), and video content organized in Bootstrap accordions.
@@ -59,7 +59,7 @@ Retro theme inspired by [Smartsheet Dashboard Design Color Themes](https://www.s
 ### Placeholder Images
 [Dummy Image Generator](https://dummyimage.com/) was used to create placeholder images for responsive chart development.
 
-![Dummy image generator](dummy-images-diagram.png)
+![alt text](/assets/images/dummy-images-diagram.png)
 
 ### Design Approach
 Detailed wireframes were used instead of user stories due to the 3-day project timeline, providing clear user flow and journey mapping.
@@ -70,8 +70,8 @@ Chrome dev tools was used to generate the lighthouse results. Performance is imp
 ![Lighthouse results](/assets/images/lighthouse-results.PNG "Lighthouse performance results")
 
 Responsive design across screen sizes:
-![responsive design big diagram](responsive-design-big.PNG)
-![responsive design small diagram](responsive-design-small.PNG)
+![responsive design big diagram](/assets/images/responsive-design-big.PNG)
+![responsive design small diagram](/assets/images/responsive-design-small.PNG)
 
 ## Deployment
 
